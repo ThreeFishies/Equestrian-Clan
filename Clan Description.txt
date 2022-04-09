@@ -1,0 +1,52 @@
+"The end is neigh, as they say it. Hell is all but destroyed, and in my desperation to save the last remaining shard of the pyre, I've brought the Boneshaker to a wild land of magic and little, colorful ponies. They're friendly and all, but are they really cut out to be champions of Hell? It's with great reluctance that I recruit them to my cause, but I have no other choice. The Seraph doomed us all when he extinguished the fires of Hell. The pyre must be rekindled, no matter the cost." --Rebel from Heaven's army, in service of the greater good.
+
+The unofficial Equestrian Clan is a fully-functional custom clan available for use with Monster Train. This is a community project, and is neither created by nor supported by ShinyShoe, Good Shepherd Entertainment, or Hasbro.
+
+
+
+Features:
+
+*46 cards total (41 are draftable)
+*17 monster cards
+*27 spell cards
+*Two new champions
+*11 relics
+*A clan-specific unit upgrade
+*Extensive lore
+*A new cavern event
+*In case you don't have enough ponies, there's a button that gives you more ponies.
+
+With tiny units and a new over-stacking mechanic, the Equestrain clan focuses on piling as many units as possible onto a single floor and using party-wide spells to support them. The more units that you can stack together, the more powerful they can become, and the stronger the magic will be that you have access to.
+
+This clan was designed for use with the DLC content, but does not require it. Please note that features that require the DLC, such as unit synthesis, will be unavailable without it.
+
+
+
+Note:
+
+Any custom clan is a significant addition to the game. This *will* result in increased loading times. Please be patient, as it can take some time to round up all the little ponies and send them to Hell!
+
+
+
+Required:
+
+The all-important Mod Loader:
+https://steamcommunity.com/workshop/filedetails/?id=2187468759
+
+Trainworks Modding Tools:
+https://steamcommunity.com/workshop/filedetails/?id=2205086946
+
+
+
+Recommended:
+
+Custom Clan Helper:
+https://steamcommunity.com/workshop/filedetails/?id=2744436572
+
+
+
+Art:
+
+Art assets were generally taken from the screenshot archives here: https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki
+
+They've been edited for use Monster Train, and some already adapted versions come from the archives of Derpibooru as well.
