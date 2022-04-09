@@ -1,0 +1,148 @@
+"FlowerPonies":
+[
+	[
+		"^<style=\"Body\">Three <color=\"blue\"><anim=shake>shivering ponies</anim></color> huddle together against the stinging wind. The <style=\"Keyword\">Boneshaker</style> <anim=shake>frightens them.</anim>",
+		"\n",
+		"^<color=#ad1854>“<style=\"Keyword\">Hellborne!</style> How... fortunate we meet here. It's been <i>hell</i> out here ever since those blasted winged ruffians </color><color=\"blue\">froze...</color><color=#ad1854> <i>Hell.</i>\"</color>",
+		"\n",
+		"^<color=#ff4cdb>“Sorry. Us flower ponies moonlight here as psychopomps but with everything </color><color=\"blue\">frozen over</color><color=#ff4cdb> we can't get any work done! Souls just <anim=wave>fly away</anim> and can't be put to rest without the light of the <style=\"Pyre\">Pyre</style> to guide them.\"</color>",
+		"\n",
+		"^<color=#da407c>“Please! You must let us help you! <style=\"Keyword\">Heaven</style> can't <i>get away</i> with this! We don't have much, but <i>something</i> we have might help.\"</color></style>",
+		"\n",
+		"^<style=\"Prompt\"><color=#ad1854>“What would you like?”</color></style>",
+		"\n",
+		"ev",
+			"str",
+				"^TakePonyTome",
+			"/str",
+		"/ev",
+		{"*":".^.c-0","flg":4},
+		"ev",
+			"str",
+				"^TakePonySpike",
+			"/str",
+		"/ev",
+		{"*":".^.c-1","flg":4},
+		"ev",
+			"str",
+				"^TakePonyGold",
+			"/str",
+		"/ev",
+		{"*":".^.c-2","flg":4},
+		"ev",
+			"str",
+				"^RefusePonyGift",
+			"/str",
+		"/ev",
+		{"*":".^.c-3","flg":4},
+		{"c-0":
+			[
+				"\n",
+				"^<style=\"Body\">A <color=\"blue\">cold</color>, cream-colored pony with a wilted red mane <i>timidly</i> approaches.",
+				"\n",
+				"^<color=#ad1854>\"H-here. If a <style=\"Keyword\">Hellborne</style> like you really can benefit from these friendship lessons, then maybe Hell really has <i>frozen over.</i>\"</color></style>",
+				"\n",
+				"^>>>GIVE_REWARD: PonyTomeReward, quiet",
+				"\n",
+				{"->":".^.^.g-0"},
+				{"#f":7}
+			],
+		"c-1":
+			[
+				"\n",
+				"^<style=\"Body\">A <color=\"blue\"><anim=shake>shivering</anim></color>, pink-hued pony with a <color=\"blue\">frosty</color>, unkempt, green mess of mane steps forward.",
+				"\n",
+				"^<color=#ff4cdb>\"A practical choice. Keep the <style=\"Keyword\">rail</style> in good order and your ride will be that much <i>smoother.</i> Best of luck, <style=\"Keyword\">Hellborne</style>. You'll need it.\"</color></style>",
+				"\n",
+				"^>>>GIVE_REWARD: PonyRailReward, quiet",
+				"\n",
+				{"->":".^.^.g-0"},
+				{"#f":7}
+			],
+		"c-2":
+			[
+				"\n",
+				"^<style=\"Body\"><b><i><anim=wave><color=#da407c>\"Not our money!\"</color></anim></i></b>",
+				"\n",
+				"^<anim=shake>Teeth chattering</anim>, a <color=\"blue\">freezing</color>, peach-hued pony with a pale, <i>washed-out</i> blond mane remains after the others jump back.",
+				"\n",
+				"^<color=#da407c>\"B-but! W-<i>we...</i>\"</color>",
+				"\n",
+				"^She <smallcaps>shrinks</smallcaps> in your presence.",
+				"\n",
+				"^<color=#da407c>\"Oh, we really wanted t-to buy <b>f-fur coats</b>, but it w-won't m-matter if you win, right? Buck that <style=\"Keyword\">Seraph</style> and <smallcaps><i>to hay with this cold!</i></smallcaps>\"</color></style>",
+				"\n",
+				"^>>>GIVE_REWARD: GoldReward100, quiet",
+				"\n",
+				{"->":".^.^.g-0"},
+				{"#f":7}
+			],
+		"c-3":
+			[
+				"\n",
+				{"->":".^.^.^.SecretRecruit"},
+				{"->":".^.^.g-0"},
+				{"#f":7}
+			],
+		"g-0":
+			[
+				"end",
+				{"#f":7}
+			]
+		}
+	],
+	{"SecretRecruit":
+		[
+			[
+				"^<style=\"Body\"><color=#ad1854>\"<b><anim=shake>Wait!</anim></b> Before you go, there is one other thing.\"",
+				"\n",
+				"^\"A <style=\"Keyword\">lost soul</style> lingers here, wandering without purpose. Without help, she'll simply <anim=wave>fade away.</anim>\"</color>",
+				"\n",
+				"^Only soft hoofprints in the snow hint that something else is there.</style>",
+				"\n",
+				"^<style=\"Prompt\"><color=#ad1854>“Will you at least watch over her for us?”</color></style>",
+				"\n",
+				"ev",
+					"str",
+						"^TakePonySecretUnit",
+					"/str",
+				"/ev",
+				{"*":".^.c-0","flg":4},
+				"ev",
+					"str",
+						"^Leave",
+					"/str",
+				"/ev",
+				{"*":".^.c-1","flg":4},
+				{"c-0":
+					[
+						"\n",
+						"^<style=\"Body\">A <color=#1f1f1f>faint shadow</color> slips onto the train, so subtle as to be indistinguishable from a <color=\"blue\">cold</color> breath of <i>frosty air</i>.",
+						"\n",
+						"^>>>GIVE_REWARD: SecretPonyReward, quiet",
+						"\n",
+						{"->":".^.^.g-0"},
+						{"#f":7}
+					],
+				"c-1":
+					[
+						"\n",
+						"^<style=\"Body\"><color=#ad1854>\"<anim=wave>But why...?\"</color></anim>",
+						"\n",
+						"^The flower ponies wave you off, but cast their eyes at the ground as the <style=\"Keyword\">Boneshaker</style> rumbles away.</style>",
+						"\n",
+						{"->":".^.^.g-0"},
+						{"#f":7}
+					],
+				"g-0":
+					[
+						"end",
+						{"#f":7}
+					]
+				}
+			],
+			{"#f":3}
+		],
+		"#f":3
+	}
+]
