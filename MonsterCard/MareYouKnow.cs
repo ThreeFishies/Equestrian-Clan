@@ -37,28 +37,28 @@ namespace Equestrian.MonsterCards
                 PriorityDraw = true,
                 AssetPath = "MonsterAssets/MareYouKnowUnit.png",
                 SubtypeKeys = new List<string> { SubtypePony.Key },
-                CharacterChatterData = new CharacterChatterDataBuilder() 
+                CharacterChatterData = new CharacterChatterDataBuilder()
                 {
                     name = "Mare You Know chatter data",
 
                     gender = CharacterChatterData.Gender.Female,
 
-                    characterAddedExpressionKeys = new List<string>() 
+                    characterAddedExpressionKeys = new List<string>()
                     {
                         "Pony_Unit_MareYouKnow_Chatter_Added_1_Key",
                     },
 
-                    characterAttackingExpressionKeys = new List<string>() 
+                    characterAttackingExpressionKeys = new List<string>()
                     {
                         "Pony_Unit_MareYouKnow_Chatter_Attacking_1_Key",
                     },
 
-                    characterSlayedExpressionKeys = new List<string>() 
+                    characterSlayedExpressionKeys = new List<string>()
                     {
                         "Pony_Unit_MareYouKnow_Chatter_Slayed_1_Key",
                     },
 
-                    characterIdleExpressionKeys = new List<string>() 
+                    characterIdleExpressionKeys = new List<string>()
                     {
                         "Pony_Unit_MareYouKnow_Chatter_Idle_1_Key",
                         "Pony_Unit_MareYouKnow_Chatter_Idle_2_Key",
@@ -76,8 +76,8 @@ namespace Equestrian.MonsterCards
                         "Pony_Unit_MareYouKnow_Chatter_Idle_14_Key",
                     },
 
-                    characterTriggerExpressionKeys = new List<CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys>() 
-                    { 
+                    characterTriggerExpressionKeys = new List<CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys>()
+                    {
                         new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
                         {
                             Key = "Pony_Unit_MareYouKnow_Chatter_Trigger_PostCombat_1_Key",
@@ -95,6 +95,7 @@ namespace Equestrian.MonsterCards
 
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
+                            /*
                             new CardEffectDataBuilder
                             {
                                 //EffectStateType = VanillaCardEffectTypes.CardEffectAddTempCardUpgradeToNextDrawnCard,
@@ -111,7 +112,25 @@ namespace Equestrian.MonsterCards
                                 EffectStateName = "CardEffectDraw",
                                 ParamInt = 1
                             },
+                            */
 
+                            new CardEffectDataBuilder
+                            {
+                                //Attempting to make something that won't break when triggered multiple times from Highly Reactive mutator and Seventh Element relic.
+                                //Works in testing.
+                                EffectStateName = typeof(CustomCharacterEffectDrawAndUpgradeCards).AssemblyQualifiedName,
+                                ParamInt = 1,
+
+                                ParamCardUpgradeData = new CardUpgradeDataBuilder
+                                {
+                                    UpgradeTitle = "MareYouKnowCostReduction",
+                                    CostReduction = 1,
+                                    XCostReduction = 1
+                                }.Build(),
+                            }
+
+
+                            //Update 0.9.8.0: This has been integrated into a custom effect so a patch is no longer needed.
                             //Note: Temp upgrades are normally only removed when a card is played. To prevent this from effecting your entire hand, a Harmony patch is needed.
                             //See: RemoveTempUpgradeToCardsAfterDrawingCards
                         }
