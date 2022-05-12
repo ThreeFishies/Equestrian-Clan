@@ -41,6 +41,8 @@ namespace Equestrian.Relic
                     {
                         Trigger = CharacterTriggerData.Trigger.OnUnscaledSpawn,
                         DisplayEffectHintText = false,
+                        HideTriggerTooltip = true,
+
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
                             new CardEffectDataBuilder
