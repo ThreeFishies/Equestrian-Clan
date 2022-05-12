@@ -13,6 +13,8 @@ using Equestrian.CardPools;
 using Equestrian;
 using Equestrian.Arcadian;
 using Equestrian.PonyStory;
+using Equestrian.Mutators;
+using CustomEffects;
 
 namespace Equestrian.StarterStuff
 {
@@ -23,6 +25,7 @@ namespace Equestrian.StarterStuff
         static void Postfix(ref SaveManager __instance)
         {
             ArcadianCompatibility.InitRun(__instance);
+            CustomMutatorEffectAddUpgradeToUnitsForPactShardsAtStartOfRun.SetupCheckNeeded = true;
 
             //Generate a list of all map nodes for the current run
             //Ponies.Log("____________Map_Node_Explorer____________");
@@ -76,6 +79,7 @@ namespace Equestrian.StarterStuff
             //__instance.AddRelic(CustomCollectableRelicManager.GetRelicDataByID(MysteriousGoldenRod.ID));
             //__instance.AddCardToDeck(CustomCardManager.GetCardDataByID(VanillaCardIDs.FormlessChild));
             //__instance.AddCardToDeck(CustomCardManager.GetCardDataByID("c6484604-b077-43ce-84a4-0179d2f36352")); //Hallowed Halls
+            //__instance.AddCardToDeck(CustomCardManager.GetCardDataByID("6f770340-a37d-4e25-9a93-6b2e46f9a252")); //Heph
             //__instance.AddRelic(CustomCollectableRelicManager.GetRelicDataByID(AChildsDrawing.ID));
             //__instance.AddRelic(CustomCollectableRelicManager.GetRelicDataByID(ACollectionOfRibbons.ID));
             //__instance.AddRelic(CustomCollectableRelicManager.GetRelicDataByID(ImaginaryFriends.ID));
@@ -94,6 +98,7 @@ namespace Equestrian.StarterStuff
             //__instance.AddCardToDeck(CustomCardManager.GetCardDataByID(TheElementsOfHarmony.ID));
             //__instance.AddCardToDeck(CustomCardManager.GetCardDataByID(Tom.ID));
             //__instance.AddCardToDeck(CustomCardManager.GetCardDataByID(Alicornification.ID));
+            //__instance.AddCardToDeck(CustomCardManager.GetCardDataByID(DressedToKill.ID));
             //__instance.AddRelic(CustomCollectableRelicManager.GetRelicDataByID("6bb39014-9b03-4620-b088-f618a7e680b7")); //blank pages
             //__instance.AddRelic(CustomCollectableRelicManager.GetRelicDataByID("2b7ee5f7-cf89-40b0-ae47-c73c5c879751")); //conscription notice
             //__instance.AddRelic(CustomCollectableRelicManager.GetRelicDataByID(Bloomberg.ID));
