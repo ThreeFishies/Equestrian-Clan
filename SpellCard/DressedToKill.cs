@@ -81,6 +81,8 @@ namespace Equestrian.SpellCards
                     {
                         //EffectStateType = VanillaCardEffectTypes.CardEffectAddTempCardUpgradeToUnits,
                         EffectStateName = "CardEffectAddTempCardUpgradeToUnits",
+                        //EffectStateName = typeof(CustomCardEffectAddTempCardUpgradeToUnitsByTrigger).AssemblyQualifiedName,
+                        //ParamTrigger = CharacterTriggerData.Trigger.PostCombat,
                         TargetMode = TargetMode.Room,
                         TargetTeamType = Team.Type.Monsters,
                         ParamCardUpgradeData = new CardUpgradeDataBuilder 
