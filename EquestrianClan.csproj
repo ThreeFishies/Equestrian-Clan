@@ -45,6 +45,11 @@
       <Private>false</Private>
       <CopyLocal>False</CopyLocal>
     </Reference>
+    <Reference Include="Unity.ResourceManager">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Monster Train\MonsterTrain_Data\Managed\Unity.ResourceManager.dll</HintPath>
+		<Private>False</Private>
+		<CopyLocal>False</CopyLocal>
+	</Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Monster Train\MonsterTrain_Data\Managed\Unity.TextMeshPro.dll</HintPath>
 		<Private>False</Private>
@@ -145,16 +150,25 @@
     <None Update="ClanAssets\Event_GimmeGold_01.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="ClanAssets\Female.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="ClanAssets\FlowerPonies.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="ClanAssets\Friendstone.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="ClanAssets\Genderless.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="ClanAssets\Gradstone.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="ClanAssets\Icon_CardBack_Equestrian.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ClanAssets\Male.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="ClanAssets\MareALee.png">
@@ -182,6 +196,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="ClanAssets\TantabusSprite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ClanAssets\Undefined.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="ClanAssets\unit-cardframe-Equestrian.png">
@@ -320,6 +337,51 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="MonsterAssets\YoLoUnit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\EquestrianMetagamef.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\Sprite\MTR_AdaptiveFoes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\Sprite\MTR_Bubbles.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\Sprite\MTR_Bureaucracy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\Sprite\MTR_CallTheCavalry.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\Sprite\MTR_Desertion.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\Sprite\MTR_DivineOmnipresence.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\Sprite\MTR_DivineVoid.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\Sprite\MTR_GenderReveal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\Sprite\MTR_GroupHug.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\Sprite\MTR_ReadyForAnything.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\Sprite\MTR_WorthIt.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\Sprite\MTR_YouveGotMail.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\Sprite\SPC_DesignedByCommittee.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mutators\Sprite\SPC_PONIESTAKEOVER.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="PonyStory\FlowerPonies.txt">

@@ -27,6 +27,8 @@ using Equestrian.Sprites;
 using CustomEffects;
 using Equestrian.Arcadian;
 using Equestrian.PonyStory;
+using Equestrian.Mutators;
+using Equestrian.Metagame;
 
 namespace Equestrian.Init
 {
@@ -44,7 +46,7 @@ namespace Equestrian.Init
 
         public const string GUID = "mod.equestrian.clan.monstertrain";
         public const string NAME = "Equestrian Clan";
-        public const string VERSION = "0.9.7.0";
+        public const string VERSION = "0.9.8.0";
         public static ClassData EquestrianClanData;
         public static CardPool BGPonyPool;
         public static EnhancerData FriendstoneData = ScriptableObject.CreateInstance<EnhancerData>();
@@ -66,6 +68,8 @@ namespace Equestrian.Init
             Ponies.Log("RegisterPetSubtype");
             SubtypeDragon.BuildAndRegister();
             Ponies.Log("RegisterDragonSubtype");
+            SubtypeTrap.BuildAndRegister();
+            Ponies.Log("RegisterTrapSubtype");
 
             //Clan
             EquestrianClanData = EquestrianClan.Buildclan();
@@ -74,6 +78,14 @@ namespace Equestrian.Init
             //Status Effects
             StatusEffectSocial.Make();
             Ponies.Log("StatusEffectSocial");
+            StatusEffectMale.Make();
+            Ponies.Log("Male");
+            StatusEffectFemale.Make();
+            Ponies.Log("Female");
+            StatusEffectGenderless.Make();
+            Ponies.Log("Genderless");
+            StatusEffectUndefined.Make();
+            Ponies.Log("Undefined");
 
             //Starter Spell (exile)
             NightTerrors.BuildAndRegister();
@@ -266,15 +278,62 @@ namespace Equestrian.Init
             Ponies.Log("Arcadian Stuff Complete.");
 
             FlowerPonies.EditMasterStoryFile();
-            Ponies.Log("Added \"FlowerPonies\" cavern event data.");
+            Ponies.Log("Added \"FlowerPonies\" cavern event script to the master story file.");
 
             FlowerPonies.BuildEventData();
-            Ponies.Log("Build and register event data.");
+            Ponies.Log("Build and register \"FlowerPonies\" event data.");
+
+            //Mutators
+            CallTheCavalryMutator.BuildAndRegister();
+            Ponies.Log("Call the Cavalry Mutator");
+            DesertionMutator.BuildAndRegister();
+            Ponies.Log("Desertion Mutator");
+            BureaucracyMutator.BuildAndRegister();
+            Ponies.Log("Bureaucracy Mutator");
+            GroupHugMutator.BuildAndRegister();
+            Ponies.Log("Group Hug Mutator");
+            DivineOmnipresence.BuildAndRegister();
+            Ponies.Log("Divine Omnipresence Mutator");
+            DivineVoid.BuildAndRegister();
+            Ponies.Log("Divine Void Mutator");
+            AdaptiveFoes.BuildAndRegister();
+            Ponies.Log("Adaptive Foes Mutator");
+            Bubbles.BuildAndRegister();
+            Ponies.Log("Bubbles Mutator");
+            WorthIt.BuildAndRegister();
+            Ponies.Log("Worth It Mutator");
+            YouveGotMail.BuildAndRegister();
+            Ponies.Log("You've Got Mail Mutator");
+            GenderReveal.BuildAndRegister();
+            Ponies.Log("Gender Reveal Mutator");
+            ReadyForAnything.BuildAndRegister();
+            Ponies.Log("Ready for Anything Mutator");
+
+            //Expert challenges
+            PONIESTAKEOVER_spChallenge.BuildAndRegister();
+            Ponies.Log("Expert Challenge: PONIES TAKE OVER");
+            DesignedByCommittee_spChallenge.BuildAndRegister();
+            Ponies.Log("Expert Challenge: Red Tape");
+            SomeDivinity_spChallenge.BuildAndRegister();
+            Ponies.Log("Expert Challenge: Some Divinity");
+            IJustDontKnowWhatWentWrong_spChallenge.BuildAndRegister();
+            Ponies.Log("Expert Challenge: I Just Don't Know What Went Wrong");
+            GenderRevealParty_spChallenge.BuildAndRegister();
+            Ponies.Log("Expert Challenge: Gender Reveal Party");
+
+            //This challenge crossed the line between 'difficult' and 'unfair'.
+            //It wasn't really fun re-rolling for specific cards/units to simply have a chance.
+            //AllOutAssault_spChallenge.BuildAndRegister();
+            //Ponies.Log("All Out Assault");
+
+            //Load metagame items
+            PonyMetagame.LoadPonyMetaFile();
+            Ponies.Log("Loaded Metagame File");
 
             //Zap this to reset it.
             AccessTools.Field(typeof(UnitSynthesisMapping), "_dictionaryMapping").SetValue(ProviderManager.SaveManager.GetBalanceData().SynthesisMapping,null);
 
-            //RUn unit synthesis mapping.
+            //Run unit synthesis mapping.
             Trainworks.Patches.AccessUnitSynthesisMapping.FindUnitSynthesisMappingInstanceToStub();
             Ponies.Log("Trainworks Unit Synthesis Patch");
 
@@ -309,6 +368,8 @@ namespace Equestrian.Init
             //Ponies.Log("CardData_overrideDescriptionKey-e6d3068eb68b320e-7987deaa29ff16e4891e8f14aac2d45e-v2".Localize());
             //Ponies.Log("CardRewardData__rewardTitleKey-2867c0be63de9841-11b47ead542e454429c34e3423ff3bf4-v2".Localize()); //Spike of the stygian reward.
             //Output: Apply {[trait0.statusmultiplier]}<sprite name="Xcost"> <b>Sap</b> and {[trait1.statusmultiplier]}<sprite name="Xcost"> <b>Frostbite</b>.
+            //Ponies.Log("MutatorData_descriptionKey-5905a445b67ceaee-82dc6963c668dd14d9bd45a460fd7173-v2".Localize()); //Shardless mutator description.
+            //Output: Disable all map nodes and events that provide <sprite name="PactShards">.
 
             EquestrianClanIsInit = true;
         }
@@ -322,6 +383,11 @@ namespace Equestrian.Init
         public static void Log(string message)
         {
             Ponies.Instance.Logger.LogInfo("Equestrian Clan: "+message);
+        }
+
+        public static void LogError(string message) 
+        {
+            Ponies.Instance.Logger.LogError("Equestrian Clan: " + message);
         }
     }
 }

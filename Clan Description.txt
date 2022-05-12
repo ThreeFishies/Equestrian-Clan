@@ -14,6 +14,8 @@ Features:
 *A clan-specific unit upgrade
 *Extensive lore
 *A new cavern event
+*12 new mutators (4 require DLC)
+*5 new expert challenges (2 require DLC)
 *In case you don't have enough ponies, there's a button that gives you more ponies.
 
 With tiny units and a new over-stacking mechanic, the Equestrain clan focuses on piling as many units as possible onto a single floor and using party-wide spells to support them. The more units that you can stack together, the more powerful they can become, and the stronger the magic will be that you have access to.
@@ -22,9 +24,38 @@ This clan was designed for use with the DLC content, but does not require it. Pl
 
 
 
-Note:
+Mutators:
+
+Adaptive Foes
+Bubbles
+Bureaucracy
+Call the Cavalry
+Desertion
+Divine Void (DLC required)
+Gender Reveal
+Group Hug
+Omnipresence (DLC required)
+Ready for Anything (DLC required)
+Worth It (DLC required)
+You've Got Mail
+
+
+
+Expert Challenges:
+
+PONIES TAKE OVER
+Red Tape
+Some Divinity (DLC required)
+I Just Don't Know What Went Wrong (DLC required)
+Gender Reveal Party
+
+
+
+Notes:
 
 Any custom clan is a significant addition to the game. This *will* result in increased loading times. Please be patient, as it can take some time to round up all the little ponies and send them to Hell!
+
+Equestrian mutators have colorful borders to help distinguish them. Mutators are sorted in alphabetical order, while the new expert challenges are added to the end of the list. Expert challenges are unlocked at covenant level 25. Check the patch notes for a full list of changes.
 
 
 
@@ -50,3 +81,9 @@ Art:
 Art assets were generally taken from the screenshot archives here: https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki
 
 They've been edited for use Monster Train, and some already adapted versions come from the archives of Derpibooru as well.
+
+
+
+GitHub:
+
+https://github.com/ThreeFishies/Equestrian-Clan
