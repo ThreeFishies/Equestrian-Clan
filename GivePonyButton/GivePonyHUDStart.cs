@@ -2,6 +2,7 @@ using HarmonyLib;
 using Equestrian.CardPools;
 using Trainworks.Managers;
 using Equestrian.HarmonyPatches;
+using Equestrian.Mutators;
 
 namespace GivePony
 {
