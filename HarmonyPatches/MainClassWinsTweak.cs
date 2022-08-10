@@ -54,7 +54,7 @@ namespace Equestrian.HarmonyPatches
 				}
 			}
 		}
-
+		
 		/*
 		public static void Postfix(ref bool __result, ref StoryEventData storyEventData) 
 		{

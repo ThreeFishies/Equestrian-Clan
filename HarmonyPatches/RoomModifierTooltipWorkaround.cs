@@ -9,6 +9,8 @@ using Equestrian.MonsterCards;
 using ShinyShoe.Loading;
 
 //Fixed erroes by defining data and removing nulls.
+//Specifically, StatusEffectStackData[] needs to be defined with an empty list when defining RoomModifierData.
+//Alternatively, this can be patched globally. See FixRoomModifierTooltipsI under TooltipFixes.cs.
 //No need for fixes if it already works.
 //This was helpful for degubbing, though.
 

@@ -29,6 +29,12 @@ namespace Equestrian.HarmonyPatches
 				metagameSaveData.lastSelectedMutatorIDs.Clear();
 				metagameSaveData.SetSpChallengeId(null);
 
+				if (metagameSaveData.GetActiveMasteryFrameType() == Ponies.PonyFrame.GetEnum()) 
+				{
+					Ponies.Log("Reset to default card mastery frame type.");
+					metagameSaveData.SetActiveMasteryFrameType(MasteryFrameType.Default);
+				}
+
 				ProviderManager.SaveManager.StartSavingMetagame("metagameSave");
 			}
 		}

@@ -97,6 +97,17 @@ namespace Equestrian.HarmonyPatches
                         for (int jj = 0; jj < baseChampUpgradeTree.GetUpgradeTrees().Count; jj++) 
                         {
                             int index = baseChampUpgradeTree.GetUpgradeTrees()[jj].GetCardUpgrades().Count - 1;
+
+                            if (ProviderManager.SaveManager.GetCurrentDistance() < 6)
+                            {
+                                index = (index > 1) ? 1 : index;
+                            }
+                            if (ProviderManager.SaveManager.GetCurrentDistance() < 3) 
+                            {
+                                index = (index > 0) ? 0 : index;
+                            }
+                            index = (index < 0) ? 0 : index;
+
                             RandomChampionPool.GrantedChampionInfo newChamp = new RandomChampionPool.GrantedChampionInfo()
                             {
                                 championCard = classData.GetChampionCard(ii),
