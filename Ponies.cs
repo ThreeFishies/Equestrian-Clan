@@ -29,6 +29,7 @@ using Equestrian.Arcadian;
 using Equestrian.PonyStory;
 using Equestrian.Mutators;
 using Equestrian.Metagame;
+using GivePony;
 
 namespace Equestrian.Init
 {
@@ -46,19 +47,36 @@ namespace Equestrian.Init
 
         public const string GUID = "mod.equestrian.clan.monstertrain";
         public const string NAME = "Equestrian Clan";
-        public const string VERSION = "0.9.8.0";
+        public const string VERSION = "1.0.0";
         public static ClassData EquestrianClanData;
         public static CardPool BGPonyPool;
         public static EnhancerData FriendstoneData = ScriptableObject.CreateInstance<EnhancerData>();
         //public static bool UnitSynthesisMappingIsBorkedAgain = false;
-        public static bool HallowedHallsInEffect = false;
+        public static bool HallowedHallsInEffect = false; //Flag needed by the social mechanic to work around a Hallowed Halls bug.
         //public static SpawnPoint LastMovedUnit = null;
         //public static bool PanicFlag = false;
-        public static bool EquestrianClanIsInit = false;
+        public static bool EquestrianClanIsInit = false; //Very important! If a patched method is invoked by another mod before the Equestrian Clan is loaded, this can cause crashes. Always check first to ensure data is loaded first before referencing any pony-specific data.
         public static bool AttemptAResetFirst = true;
+        public static PonyFrame PonyFrame; //This is for the clan's card mastery frame
+        //public static GivePonyToggle givePonyToggle;
 
+        //In order to make a loading screen work, the clan's loading process was moved from the default Trainworks location of AssetLoadingManager.Start().
         public void Initialize()
         {
+            //Init the clan data here so the custom clan helper can find it.
+
+            //Clan
+            EquestrianClanData = EquestrianClan.Buildclan();
+            Ponies.Log("Build Clan");
+        }
+
+        //To LoadingScreen.FadeOutFullScreen(). Note that the background image needs to be prepped earlier, at LoadingScreen.Initialize() or it won't show up.
+        public void InitializeHereInstead() 
+        {
+            //Oh, and change the cursor too, because we can.
+            PonyLoader.ChangeCursor();
+            Ponies.Log("TempPonyCursor");
+
             //Character Subtypes
             SubtypeHerb.BuildAndRegister();
             Ponies.Log("RegisterHerbSubtype");
@@ -70,10 +88,6 @@ namespace Equestrian.Init
             Ponies.Log("RegisterDragonSubtype");
             SubtypeTrap.BuildAndRegister();
             Ponies.Log("RegisterTrapSubtype");
-
-            //Clan
-            EquestrianClanData = EquestrianClan.Buildclan();
-            Ponies.Log("Build Clan");
 
             //Status Effects
             StatusEffectSocial.Make();
@@ -140,8 +154,10 @@ namespace Equestrian.Init
             Ponies.Log("Spa Treatment");
             SpontaneousSongAndDance.BuildAndRegister();
             Ponies.Log("Spontaneous Song and Dance");
+            //One of the game's tooltip keys for X-scaling healing was left undefined.
             //Ponies.Log("CardTraitScalingAddDamage_ExtraDamage_XCostOutsideBattle_CardText".Localize(null));
             //Ponies.Log("CardTraitScalingAddDamage_ExtraHealing_XCostOutsideBattle_CardText".Localize(null));
+            //fix: <nobr><i>(<{1}>*+{0}*</{1}> healing)</i></nobr>
             Interrogation.BuildAndRegister();
             Ponies.Log("Interrogation");
             //Uncommon spell "Fan Club" initializes after card pool initialization
@@ -195,6 +211,7 @@ namespace Equestrian.Init
             //Ponies.Log("RoomModifiersData[0].DescriptionKey: " + CustomCharacterManager.GetCharacterDataByID(HeartsDesire.CharID).GetRoomModifiersData()[0].GetDescriptionKey());
 
             //A hidden unit that provides a default essence to prevent crashes.
+            //Check MissingMare.cs under the MonsterCard folder for tips on how to find her.
             MissingMare.BuildAndRegister();
             Ponies.Log("Missing Mare");
 
@@ -211,6 +228,8 @@ namespace Equestrian.Init
             Ponies.Log("Tom");
 
             //Enhancers
+            //This generates errors because Trainworks uses new EnhancerData(); instead of ScriptableObject.CreateInstance<EnhancerData>();
+            //It still works, though.
             Ponies.FriendstoneData = Friendstone.BuildAndRegister();
             Ponies.Log("Friendstone");
             Playstone.BuildAndRegister();
@@ -270,16 +289,23 @@ namespace Equestrian.Init
             EquestrianBanner.buildbanner();
             Ponies.Log("Banner");
 
+            //Fix a bug with the revenge version of Heaven's aid so it won't trigger Preeny Snuggles' on played effect when triggered.
             FixHeavensAid.MakeItSo();
             Ponies.Log("Fix Heaven's Aid");
+
+            //Change Heph's gender from Male to Female.
+            HephIsAFineAndDandyLADYThankYouVeryMuch.Fix();
+            Ponies.Log("Stop Misgendering Heph");
 
             //Add equestrian variants for the starter spell 'Analog'
             ArcadianCompatibility.Initialize();
             Ponies.Log("Arcadian Stuff Complete.");
 
+            //The story file controls the text and defines the clickable buttons and logic of cavern events.
             FlowerPonies.EditMasterStoryFile();
             Ponies.Log("Added \"FlowerPonies\" cavern event script to the master story file.");
 
+            //The event data determines any requirements and links the clickable buttons to their effects/rewards.
             FlowerPonies.BuildEventData();
             Ponies.Log("Build and register \"FlowerPonies\" event data.");
 
@@ -327,6 +353,7 @@ namespace Equestrian.Init
             //Ponies.Log("All Out Assault");
 
             //Load metagame items
+            //This inculdes the state of the 'Give Pony' toggle, the number of times Missing Mare was recruited (for the card mastery frame), and the victory status (normal/divine) of completed expert challenges.
             PonyMetagame.LoadPonyMetaFile();
             Ponies.Log("Loaded Metagame File");
 
@@ -336,6 +363,15 @@ namespace Equestrian.Init
             //Run unit synthesis mapping.
             Trainworks.Patches.AccessUnitSynthesisMapping.FindUnitSynthesisMappingInstanceToStub();
             Ponies.Log("Trainworks Unit Synthesis Patch");
+
+            //The card mastery frame is unlocked by finding Missing Mare.
+            //This just extends the enum type of MasteryFrameType.
+            PonyFrame = new PonyFrame("ponyCardFrame");
+            Ponies.Log("Pony Card Mastery Frame");
+
+            //Clear the background 'Loading...' image and reset the game cursor back to normal.
+            PonyLoader.HideImage();
+            Ponies.Log("Ending Loading Image");
 
             //Event Data Mining
             //Ponies.Log("EventChoice_HephRecruit_TakeHammer".Localize());
@@ -372,6 +408,11 @@ namespace Equestrian.Init
             //Output: Disable all map nodes and events that provide <sprite name="PactShards">.
 
             EquestrianClanIsInit = true;
+
+            //RemovePonyPile.CollectArcadianUnits();
+
+            //Ponies.Log("Enum: " + PonyFrame.GetEnum().ToString());
+            //Ponies.Log("ID: " + (int)PonyFrame.GetEnum());
         }
         private void Awake()
         {

@@ -15,6 +15,8 @@ namespace Equestrian.Enhancers
     [HarmonyPatch(typeof(EnhancerPool), "GetFilteredChoices")]
     class FriendstoneIsEquestrianExclusive
     {
+        //Trainworks replaces the original code with their own version that does not take class restrictions of custom enhancers into account.
+        //This will edit the result to remove the friendstone from the list if Equestrian is not a primary or secondary clan.
         static public void Postfix(ref List<EnhancerData> __result) 
         {
             SaveManager saveManager = ProviderManager.SaveManager;
