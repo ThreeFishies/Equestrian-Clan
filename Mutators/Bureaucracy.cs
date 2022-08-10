@@ -23,6 +23,8 @@ namespace Equestrian.Mutators
 
         public static void BuildAndRegister()
         {
+            CardData trainSteward = ProviderManager.SaveManager.GetAllGameData().FindCardData("d14a50f3-728d-43e1-87f0-ef1b013f6678");
+
             AccessTools.Field(typeof(GameData), "id").SetValue(bureaucracyMutatorData, ID);
             AccessTools.Field(typeof(MutatorData), "nameKey").SetValue(bureaucracyMutatorData, "Pony_Mutator_Bureaucracy_Name_Key");
             AccessTools.Field(typeof(MutatorData), "descriptionKey").SetValue(bureaucracyMutatorData, "Pony_Mutator_Bureaucracy_Description_Key");
@@ -97,6 +99,15 @@ namespace Equestrian.Mutators
                         }
                     }
                 }.Build(),
+
+                new RelicEffectDataBuilder
+                {
+                    RelicEffectClassName = typeof(RelicEffectModifyMonsterCapacity).AssemblyQualifiedName,
+                    ParamInt = -1, //Reduce size by 1
+                    ParamBool = false, //Does not apply to all.
+                    ParamCharacterSubtype = "SubtypesData_TrainSteward",
+                    ParamString = trainSteward.GetSpawnCharacterData().GetAssetKey(),
+                }.Build(),
             };
             AccessTools.Field(typeof(MutatorData), "effects").SetValue(bureaucracyMutatorData, effects);
             List<string> relicLoreTooltipKeys = new List<string>
@@ -113,7 +124,6 @@ namespace Equestrian.Mutators
             {
             };
             AccessTools.Field(typeof(MutatorData), "tags").SetValue(bureaucracyMutatorData, tags);
-
 
             AllGameData allGameData = ProviderManager.SaveManager.GetAllGameData();
             List<MutatorData> mutatorDatas = (List<MutatorData>)AccessTools.Field(typeof(AllGameData), "mutatorDatas").GetValue(allGameData);

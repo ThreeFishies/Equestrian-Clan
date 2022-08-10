@@ -200,24 +200,19 @@ namespace Equestrian.MonsterCards
                         {
                             new CardEffectDataBuilder
                             {
-                                //EffectStateType = VanillaCardEffectTypes.CardEffectAddTempCardUpgradeToNextDrawnCard,
-                                EffectStateName = "CardEffectAddTempCardUpgradeToNextDrawnCard",
-                                TargetMode = TargetMode.Room,
-                                TargetTeamType = Team.Type.None,
+                                //Attempting to make something that won't break when triggered multiple times from Highly Reactive mutator and Seventh Element relic.
+                                EffectStateName = typeof(CustomCharacterEffectDrawAndUpgradeCards).AssemblyQualifiedName,
+                                ParamInt = 1,
+
                                 ParamCardUpgradeData = new CardUpgradeDataBuilder
                                 {
-                                    UpgradeTitle = "MareYouKnow_title",
+                                    UpgradeTitle = "MareYouKnowCostReduction_essence",
                                     CostReduction = 1,
                                     XCostReduction = 1
                                 }.Build(),
                             },
 
-                            new CardEffectDataBuilder
-                            {
-                                EffectStateName = "CardEffectDraw",
-                                ParamInt = 1
-                            },
-
+                            //The effect was redesigned due to increased trigger effects not working properly so this note is no longer relavent. 
                             //Note: Temp upgrades are normally only removed when a card is played. To prevent this from effecting your entire hand, a Harmony patch is needed.
                             //See: RemoveTempUpgradeToCardsAfterDrawingCards
                         }
