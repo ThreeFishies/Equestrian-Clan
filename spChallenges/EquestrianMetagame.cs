@@ -10,8 +10,10 @@ using System.IO;
 using HarmonyLib;
 using ShinyShoe;
 using Equestrian.Sprites;
+using Equestrian.CardMasteryFrame;
 using UnityEngine;
 using CustomEffects;
+using GivePony;
 
 namespace Equestrian.Metagame 
 {
@@ -24,6 +26,8 @@ namespace Equestrian.Metagame
         public static string victoryTag = "victory";
         public static string divineTag = "divine";
         public static bool dirty = false;
+        public static string missingMareCountTag = "#timesFoundMissingMare";
+        public static string givePonyToggleButtonTag = "#GivePonyButton";
 
         public static bool RegisterChallenge(string spChallengeID, bool victory = false, bool divine = false)
         {
@@ -97,6 +101,11 @@ namespace Equestrian.Metagame
 
         public static void LoadPonyMetaFile() 
         {
+            //for testing:
+            //MissingMareUnlockedMasteryCriteria.timesMissingMareSeen = 10;
+
+            GivePonyToggle.isGivePonyButtonEnabled = true; //default value
+
             if (!File.Exists(metaFile)) 
             {
                 Ponies.Log($"File {metaFile} not found. A new one will be created.");
@@ -117,9 +126,50 @@ namespace Equestrian.Metagame
             string currentSpChallengeID = string.Empty;
             bool currentVictory = false;
             bool currentDivine = false;
+            bool isMissingMareCount = false;
+            bool isGivePonyToggle = false;
 
             for (int ii = 0; ii < metaFileData.Length; ii++) 
             {
+                if (metaFileData[ii].Trim().IsNullOrEmpty() && isGivePonyToggle) 
+                {
+                    //default value
+                    GivePonyToggle.isGivePonyButtonEnabled = true;
+                    isGivePonyToggle = false;
+                }
+                else if (!metaFileData[ii].Trim().IsNullOrEmpty() && isGivePonyToggle) 
+                {
+                    if (bool.TryParse(metaFileData[ii].Trim(), out GivePonyToggle.isGivePonyButtonEnabled)) 
+                    { 
+                    }
+                    else 
+                    {
+                        GivePonyToggle.isGivePonyButtonEnabled = true;
+                    }
+
+                    isGivePonyToggle = false;
+                }
+
+                if (metaFileData[ii].Trim().IsNullOrEmpty() && isMissingMareCount) 
+                {
+                    MissingMareUnlockedMasteryCriteria.timesMissingMareSeen = 0;
+                    isMissingMareCount = false;
+                }
+                else if(!metaFileData[ii].Trim().IsNullOrEmpty() && isMissingMareCount) 
+                {
+                    int count;
+                    if (int.TryParse(metaFileData[ii].Trim(), out count))
+                    {
+                        MissingMareUnlockedMasteryCriteria.timesMissingMareSeen = count;
+                    }
+                    else 
+                    {
+                        MissingMareUnlockedMasteryCriteria.timesMissingMareSeen = 0;
+                    }
+
+                    isMissingMareCount = false;
+                }
+
                 if (metaFileData[ii].Trim().IsNullOrEmpty() && isSpChallenge)
                 {
                     UpdateChallenge(currentSpChallengeID, currentVictory, currentDivine, true);
@@ -140,6 +190,14 @@ namespace Equestrian.Metagame
                 if (metaFileData[ii].Trim() == spChallengeTag)
                 {
                     isSpChallenge = true;
+                }
+                else if (metaFileData[ii].Trim() == missingMareCountTag) 
+                {
+                    isMissingMareCount = true;
+                }
+                else if (metaFileData[ii].Trim() == givePonyToggleButtonTag) 
+                {
+                    isGivePonyToggle = true;
                 }
                 else if (metaFileData[ii].Trim() == victoryTag && isSpChallenge) 
                 {
@@ -169,19 +227,33 @@ namespace Equestrian.Metagame
             metaData.Add(preamble);
             metaData.Add(string.Empty);
 
+            metaData.Add(givePonyToggleButtonTag);
+            metaData.Add(GivePonyToggle.isGivePonyButtonEnabled.ToString());
+            metaData.Add(string.Empty);
+
+            if (MissingMareUnlockedMasteryCriteria.timesMissingMareSeen > 0) 
+            {
+                metaData.Add(missingMareCountTag);
+                metaData.Add(MissingMareUnlockedMasteryCriteria.timesMissingMareSeen.ToString());
+                metaData.Add(string.Empty);
+            }
+
             foreach (spChallengeMeta meta in challengeMetas) 
             {
-                metaData.Add(spChallengeTag);
-                metaData.Add(meta.spChallengeID);
                 if (meta.victory) 
                 {
+                    metaData.Add(spChallengeTag);
+                    metaData.Add(meta.spChallengeID);
                     metaData.Add(victoryTag);
                 }
                 if (meta.divine)
                 {
                     metaData.Add(divineTag);
                 }
-                metaData.Add(string.Empty);
+                if (meta.victory)
+                {
+                    metaData.Add(string.Empty);
+                }
             }
 
             if (File.Exists(metaFile))
@@ -192,7 +264,7 @@ namespace Equestrian.Metagame
                 }
                 catch (Exception ffff)
                 {
-                    Ponies.LogError("Unable to delete ond meta file " + metaFile);
+                    Ponies.LogError("Unable to delete old meta file " + metaFile);
                     Ponies.LogError("Error: " + ffff.Message);
                 }
             }
