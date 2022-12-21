@@ -85,7 +85,7 @@ namespace Equestrian.Arcadian
         {
             SaveManager saveManager = ProviderManager.SaveManager;
 
-            if (!saveManager.IsInBattle() || !ArcadianExists) 
+            if (!ArcadianExists) 
             {
                 return false;
             }

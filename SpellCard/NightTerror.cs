@@ -29,7 +29,7 @@ namespace Equestrian.SpellCards
                 Targetless = false,
                 ClanID = EquestrianClan.ID,
                 AssetPath = "SpellAssets/NightTerrors.png",
-                CardPoolIDs = new List<string> { VanillaCardPoolIDs.MegaPool },
+                CardPoolIDs = new List<string> {  },
                 CardLoreTooltipKeys = new List<string> 
                 { 
                     "Pony_Spell_NightTerrors_Lore_Key"

@@ -1,0 +1,20 @@
+This file keeps track of Equestrian metagame objects not handled by the Custom Clan Helper mod.
+
+#spChallenge
+mod.equestrian.clan.monstertrain_PONIESTAKEOVER_spChallenge
+
+#spChallenge
+mod.equestrian.clan.monstertrain_DesignedByCommittee_spChallenge
+victory
+
+#spChallenge
+mod.equestrian.clan.monstertrain_GenderRevealParty_spChallenge
+
+#spChallenge
+mod.equestrian.clan.monstertrain_SomeDivinity_spChallenge
+victory
+divine
+
+#spChallenge
+mod.equestrian.clan.monstertrain_IJustDontKnowWhatWentWrong_spChallenge
+

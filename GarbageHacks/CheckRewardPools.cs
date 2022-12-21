@@ -16,7 +16,11 @@ namespace Equestrian.HarmonyPatches
 {
     [HarmonyPatch(typeof(CardPoolHelper), "GetCardsForClass", new Type[] { typeof(CardPool), typeof(ClassData), typeof(int), typeof(CollectableRarity), typeof(SaveManager), typeof(CardPoolHelper.RarityCondition), typeof(bool) })]
     public static class PoolInspector 
-    { 
+    {
+        /// <summary>
+        /// This patch is needed because Trainworks does not take class level into account when adding cards to pools.
+        /// </summary>
+        [HarmonyAfter(new string[] { "tools.modding.trainworks" })]
         public static void Postfix(ref List<CardData> __result, ref CardPool cardPool, ref ClassData classData, ref int classLevel)
         {
             //Ponies.Log("INSPECTING A CARD POOL FILTERED BY CLASS");

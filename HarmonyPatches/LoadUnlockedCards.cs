@@ -78,7 +78,7 @@ namespace Equestrian.HarmonyPatches
                     cardDataList.Add(CustomCardManager.GetCardDataByID(Alicornification.ID));
                 }
 
-                FixArt.TryYetAnotherFix(cardsToShow);
+                FixArt.TryYetAnotherFix(cardsToShow, ShinyShoe.Loading.LoadingScreen.DisplayStyle.Spinner);
             }
         }
     }

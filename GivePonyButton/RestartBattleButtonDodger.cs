@@ -8,8 +8,14 @@ namespace Equestrian.HarmonyPatches
 {
     public static class CollisionAvoider
     {
+        public static bool hasRestartBattleButton = false;
+        public static bool hasMoveBattleUI = false;
+        private static bool doneInit = false;
+
         public static bool HasRestartBattleButton()
         {
+            if (doneInit) { return hasRestartBattleButton; }
+
             var originalMethods = Harmony.GetAllPatchedMethods();
             foreach (var method in originalMethods) 
             {
@@ -32,11 +38,21 @@ namespace Equestrian.HarmonyPatches
                     if (owner == "com.shinyshoe.restartbattle")
                     {
                         Ponies.Log("Restart Battle Button Exists.");
-                        return true;
+                        hasRestartBattleButton = true;
                     }
+                    if (owner == "rawsome.modster-train.move-battle-ui") 
+                    {
+                        Ponies.Log("Battle UI has been moved.");
+                        hasMoveBattleUI = true;
+                    }
+
+                    //Ponies.Log("Patch owner: " + owner);
                 }
             }
-            return false;
+
+            doneInit = true;
+
+            return hasRestartBattleButton;
         }
     }
 }

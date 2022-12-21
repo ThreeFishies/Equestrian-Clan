@@ -135,8 +135,8 @@ namespace Equestrian.MonsterCards
                 UpgradeTitle = "GuardianOfTheGatesEssence",
                 SourceSynthesisUnit = GuardianOfTheGatesCharacterData,
                 UpgradeDescriptionKey = "Pony_Unit_GuardianOfTheGates_Essence_Key",
-                BonusHP = 75,
-                BonusDamage = 25,
+                BonusHP = 60,
+                BonusDamage = 20,
                 BonusSize = 3,
                 StatusEffectUpgrades = new List<StatusEffectStackData> 
                 { 

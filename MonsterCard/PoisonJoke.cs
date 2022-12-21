@@ -126,6 +126,13 @@ namespace Equestrian.MonsterCards
                 },
                 LinkedClass = Ponies.EquestrianClanData,
                 UnlockLevel = 8,
+                TraitBuilders = new List<CardTraitDataBuilder> 
+                { 
+                    new CardTraitDataBuilder
+                    {
+                        TraitStateName = typeof(CustomCardTraitHerb).AssemblyQualifiedName
+                    }
+                },
 
                 EffectBuilders = new List<CardEffectDataBuilder>
                 {

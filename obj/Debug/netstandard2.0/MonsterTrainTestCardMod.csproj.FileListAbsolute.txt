@@ -1,0 +1,304 @@
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterTrainTestCardMod.deps.json
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterTrainTestCardMod.dll
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterTrainTestCardMod.pdb
+C:\Users\dnordstr\Documents\Cardmod_Sandbox\obj\Debug\netstandard2.0\MonsterTrainTestCardMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dnordstr\Documents\Cardmod_Sandbox\obj\Debug\netstandard2.0\MonsterTrainTestCardMod.AssemblyInfoInputs.cache
+C:\Users\dnordstr\Documents\Cardmod_Sandbox\obj\Debug\netstandard2.0\MonsterTrainTestCardMod.AssemblyInfo.cs
+C:\Users\dnordstr\Documents\Cardmod_Sandbox\obj\Debug\netstandard2.0\MonsterTrainTestCardMod.csproj.CoreCompileInputs.cache
+C:\Users\dnordstr\Documents\Cardmod_Sandbox\obj\Debug\netstandard2.0\MonsterTrainTestCardMod.dll
+C:\Users\dnordstr\Documents\Cardmod_Sandbox\obj\Debug\netstandard2.0\MonsterTrainTestCardMod.pdb
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\BackgroundPonyCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\BackgroundPonyUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\SpellAssets\Reserves.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\SpellAssets\applecider.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\SpellAssets\DressedToKill.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\SpellAssets\NightTerrors.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\SpellAssets\Shenanigans.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\SpellAssets\timetoshine.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\SpellAssets\PastryWarfare.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\Localization\PoniesEverywhere.csv
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\StaticJoyCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\StaticJoyUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\PreenySnuggleCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\PreenySnuggleUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\SpellAssets\BuckOff.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\EquestrianLogo_32.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\EquestrianLogo_56.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\Equestrian_Disabled.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\Equestrian_Enabled.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\Equestrian_Frozen.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\Equestrian_VisitedDisabled.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\Icon_CardBack_Equestrian.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\MareALee.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\MSK_Map_Clan_CEquestrian_01.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\selection_outlines.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\spell-cardframe-Equestrian.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\unit-cardframe-Equestrian.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\MareaLeeCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\MareaLeeUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\EquestrianLogo_89.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\EquestrianLogo_Silhouette.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\Tantabus.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\TantabusCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\TantabusUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\TrashPandaCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\TrashPandaUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\SnackasmackyCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\SnackasmackyUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\MareYouKnowCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\MareYouKnowUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\MistyStepCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\MistyStepUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\SpellAssets\PartyInvitation.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\SpellAssets\VIPList.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\SpellAssets\PackedAudience.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\SqueakyBooBooCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\SqueakyBooBooUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\TavernAceCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\TavernAceUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\LordOfEmberCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\LordOfEmberUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\Friendstone.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\social.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\ClanAssets\Playstone.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\GuardianOfTheGatesCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\GuardianOfTheGatesUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\SpellAssets\PartyCannon.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\SpellAssets\BlankFlank.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\SpellAssets\SpaTreatment.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\HeartsDesireCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\HeartsDesireUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\PoisonJokeCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\PoisonJokeUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\YoLoCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\YoLoUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\FinchyCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\FinchyUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\CrunchieMunchieCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\CrunchieMunchieUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\CarrotCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\MonsterAssets\CarrotUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\RelicAssets\BottledCutieMark.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\RelicAssets\TornLapelPin.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\RelicAssets\MareInTheMoon.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\RelicAssets\TinyMouseCrutches.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\RelicAssets\MysteriousGoldenRod.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\RelicAssets\AChildsDrawing.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\RelicAssets\ACollectionOfRibbons.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\RelicAssets\ImaginaryFriends.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\RelicAssets\RoyalScroll.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\RelicAssets\JunkFood.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\MonsterTrainTestCard\plugins\RelicAssets\TheSeventhElement.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\EquestrianLogo_32.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\EquestrianLogo_56.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\EquestrianLogo_89.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\EquestrianLogo_Silhouette.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\Equestrian_Disabled.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\Equestrian_Enabled.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\Equestrian_Frozen.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\Equestrian_VisitedDisabled.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\Friendstone.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\Icon_CardBack_Equestrian.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\MareALee.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\MSK_Map_Clan_CEquestrian_01.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\Playstone.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\selection_outlines.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\social.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\spell-cardframe-Equestrian.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\Tantabus.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\unit-cardframe-Equestrian.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\Localization\PoniesEverywhere.csv
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\BackgroundPonyCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\BackgroundPonyUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\CarrotCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\CarrotUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\CrunchieMunchieCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\CrunchieMunchieUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\FinchyCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\FinchyUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\GuardianOfTheGatesCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\GuardianOfTheGatesUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\HeartsDesireCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\HeartsDesireUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\LordOfEmberCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\LordOfEmberUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\MareaLeeCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\MareaLeeUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\MareYouKnowCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\MareYouKnowUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\MistyStepCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\MistyStepUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\PoisonJokeCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\PoisonJokeUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\PreenySnuggleCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\PreenySnuggleUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\SnackasmackyCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\SnackasmackyUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\SqueakyBooBooCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\SqueakyBooBooUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\StaticJoyCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\StaticJoyUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\TantabusCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\TantabusUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\TavernAceCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\TavernAceUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\TrashPandaCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\TrashPandaUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\YoLoCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterAssets\YoLoUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\RelicAssets\AChildsDrawing.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\RelicAssets\ACollectionOfRibbons.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\RelicAssets\BottledCutieMark.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\RelicAssets\ImaginaryFriends.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\RelicAssets\JunkFood.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\RelicAssets\MareInTheMoon.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\RelicAssets\MysteriousGoldenRod.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\RelicAssets\RoyalScroll.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\RelicAssets\TheSeventhElement.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\RelicAssets\TinyMouseCrutches.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\RelicAssets\TornLapelPin.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\applecider.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\BlankFlank.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\BuckOff.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\DressedToKill.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\NightTerrors.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\PackedAudience.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\PartyCannon.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\PartyInvitation.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\PastryWarfare.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\Reserves.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\Shenanigans.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\SpaTreatment.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\SpontaneousSongAndDance.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\timetoshine.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\VIPList.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterTrainTestCardMod.deps.json
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterTrainTestCardMod.dll
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\MonsterTrainTestCardMod.pdb
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\Interrogation.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\FanClub.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\WinterWrapUp.png
+C:\Users\dnordstr\Documents\Cardmod_Sandbox\obj\Debug\netstandard2.0\MonsterTrainTestCardMod.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\FirstAid.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\Checklist.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\ChangelingInfiltrator.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\RainbowPower.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\EquestrianRailspike.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\Gradstone.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\SecondChance.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\Alicornification.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\TheElementsOfHarmony.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\SpellAssets\Tom.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\EquestrianClanSprite.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\MareALeeSprite.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian\plugins\ClanAssets\TantabusSprite.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\EquestrianClanSprite.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\EquestrianLogo_32.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\EquestrianLogo_56.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\EquestrianLogo_89.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\EquestrianLogo_Silhouette.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\Equestrian_Disabled.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\Equestrian_Enabled.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\Equestrian_Frozen.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\Equestrian_VisitedDisabled.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\Friendstone.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\Gradstone.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\Icon_CardBack_Equestrian.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\MareALee.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\MareALeeSprite.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\MSK_Map_Clan_CEquestrian_01.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\Playstone.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\selection_outlines.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\social.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\spell-cardframe-Equestrian.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\Tantabus.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\TantabusSprite.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\unit-cardframe-Equestrian.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\Localization\PoniesEverywhere.csv
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\BackgroundPonyCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\BackgroundPonyUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\CarrotCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\CarrotUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\CrunchieMunchieCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\CrunchieMunchieUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\FinchyCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\FinchyUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\GuardianOfTheGatesCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\GuardianOfTheGatesUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\HeartsDesireCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\HeartsDesireUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\LordOfEmberCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\LordOfEmberUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\MareaLeeCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\MareaLeeUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\MareYouKnowCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\MareYouKnowUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\MistyStepCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\MistyStepUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\PoisonJokeCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\PoisonJokeUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\PreenySnuggleCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\PreenySnuggleUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\SnackasmackyCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\SnackasmackyUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\SqueakyBooBooCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\SqueakyBooBooUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\StaticJoyCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\StaticJoyUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\TantabusCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\TantabusUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\TavernAceCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\TavernAceUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\TrashPandaCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\TrashPandaUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\YoLoCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\YoLoUnit.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\RelicAssets\AChildsDrawing.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\RelicAssets\ACollectionOfRibbons.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\RelicAssets\BottledCutieMark.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\RelicAssets\ImaginaryFriends.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\RelicAssets\JunkFood.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\RelicAssets\MareInTheMoon.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\RelicAssets\MysteriousGoldenRod.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\RelicAssets\RoyalScroll.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\RelicAssets\TheSeventhElement.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\RelicAssets\TinyMouseCrutches.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\RelicAssets\TornLapelPin.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\Alicornification.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\applecider.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\BlankFlank.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\BuckOff.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\ChangelingInfiltrator.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\Checklist.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\DressedToKill.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\EquestrianRailspike.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\FanClub.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\FirstAid.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\Interrogation.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\NightTerrors.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\PackedAudience.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\PartyCannon.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\PartyInvitation.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\PastryWarfare.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\RainbowPower.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\Reserves.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\SecondChance.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\Shenanigans.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\SpaTreatment.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\SpontaneousSongAndDance.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\TheElementsOfHarmony.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\timetoshine.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\Tom.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\VIPList.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\SpellAssets\WinterWrapUp.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterTrainTestCardMod.deps.json
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterTrainTestCardMod.dll
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterTrainTestCardMod.pdb
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\modimage.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\modmanifest.json
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\RelicAssets\Bloomberg.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ArcadianCompatibility\Assets\EquestrianAnalog.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ArcadianCompatibility\Assets\VampireFruitBatCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ArcadianCompatibility\Assets\VampireFruitBatCharacter.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\MissingMareCard.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\MonsterAssets\MissingMareUnit.png

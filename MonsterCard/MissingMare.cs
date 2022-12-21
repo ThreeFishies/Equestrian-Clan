@@ -1,3 +1,43 @@
+/*
+Hello, there. If you're reading this, you're probably curious about how to find this elusive unit to unlock the Equestrian card mastery frame.
+
+Before I get to that, I would like to remind you that lore for this clan was written from the perspective of a rebel from Heaven's army. His story begins on the clan's Steam Workshop page, and is told in varying pieces throughout the many lore tooltips. Missing Mare occupies a special place in the clan's lore, as she brings this story to its conclusion.
+
+To help you find her, here are a few hints. The solution is further below.
+
+Hint 1: Missing Mare can be found on any covenant rank.
+
+Hint 2: There are no requirements to unlock her.
+
+Hint 3: You don't have to play as the Equestrian clan to find her.
+
+Hint 4: In any given run, there's roughly a 10% chance you'll be able to recruit her.
+
+Hint 5: If souls are mentioned and ponies are around, you're in the right place.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,14 +50,13 @@ using UnityEngine;
 using Trainworks.Utilities;
 using Equestrian.Init;
 using CustomEffects;
-//using MonsterTrainTestMod.Clans;
 using Equestrian;
 using Equestrian.Champions;
 
 namespace Equestrian.MonsterCards
 {
     /// <summary>
-    /// This secret unit can be obtained by skipping the first set of options in the FlowerPonies event.
+    /// Spoiler: You can recruit Missing Mare if you skip the first set of options in the Flower Ponies cavern event.
     /// </summary>
     class MissingMare
     {
@@ -175,7 +214,7 @@ namespace Equestrian.MonsterCards
                     new StatusEffectStackData
                     {
                         statusId = VanillaStatusEffectIDs.Stealth,
-                        count = 1
+                        count = 3
                     }
                 }
             }.Build();

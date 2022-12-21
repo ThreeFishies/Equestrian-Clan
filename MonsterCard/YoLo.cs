@@ -81,7 +81,7 @@ namespace Equestrian.MonsterCards
                     new CharacterTriggerDataBuilder
                     {
                         trigger = CharacterTriggerData.Trigger.OnUnscaledSpawn,
-                        HideTriggerTooltip = false,
+                        HideTriggerTooltip = true,
                         DescriptionKey = "Pony_Unit_YoLo_Description_Key",
                         
                         EffectBuilders = new List<CardEffectDataBuilder>

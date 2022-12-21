@@ -179,8 +179,11 @@ namespace Equestrian.Champions
 											{
 												"CardEffectDamage",
 												"CardEffectHeal",
-												"CardEffectHealAndDamageRelative"
-											},
+												"CardEffectHealAndDamageRelative",
+
+                                                "UnofficialBalancePatch.CardEffects.CardEffectDamageRandomWithPriority, UnofficialBalancePatch, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null",
+                                                "UnofficialBalancePatch.CardEffects.CardEffectSacrificeAndDamageRelative, UnofficialBalancePatch, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null"
+                                            },
 										}.Build(),
 									}
 								}.Build(),
@@ -280,14 +283,17 @@ namespace Equestrian.Champions
 											{
 												MyCardPools.PsychosisFilteredCards,
 											},
-											CardType = CardType.Spell,
+                                            CardType = CardType.Spell,
 											RequiredCardEffectsOperator = CardUpgradeMaskDataBuilder.CompareOperator.Or,
 											RequiredCardEffects = new List<String>
 											{
 												"CardEffectDamage",
 												"CardEffectHeal",
-												"CardEffectHealAndDamageRelative"
-											},
+												"CardEffectHealAndDamageRelative",
+
+                                                "UnofficialBalancePatch.CardEffects.CardEffectDamageRandomWithPriority, UnofficialBalancePatch, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null",
+                                                "UnofficialBalancePatch.CardEffects.CardEffectSacrificeAndDamageRelative, UnofficialBalancePatch, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null"
+                                            },
 										}.Build(),
 									}
 								}.Build(),
@@ -388,14 +394,17 @@ namespace Equestrian.Champions
 											{
 												MyCardPools.PsychosisFilteredCards,
 											},
-											CardType = CardType.Spell,
+                                            CardType = CardType.Spell,
 											RequiredCardEffectsOperator = CardUpgradeMaskDataBuilder.CompareOperator.Or,
 											RequiredCardEffects = new List<String>
 											{
 												"CardEffectDamage",
 												"CardEffectHeal",
-												"CardEffectHealAndDamageRelative"
-											},
+												"CardEffectHealAndDamageRelative",
+
+                                                "UnofficialBalancePatch.CardEffects.CardEffectDamageRandomWithPriority, UnofficialBalancePatch, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null",
+                                                "UnofficialBalancePatch.CardEffects.CardEffectSacrificeAndDamageRelative, UnofficialBalancePatch, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null"
+                                            },
 										}.Build(),
 									}
 								}.Build(),
