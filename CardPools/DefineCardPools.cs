@@ -118,7 +118,8 @@ namespace Equestrian.CardPools
                 CardIDs= new List<string> 
                 {
                     VanillaCardIDs.UnleashtheWildwood,
-                    VanillaCardIDs.AdaptiveMutation
+                    VanillaCardIDs.AdaptiveMutation,
+                    CustomCardManager.GetCardDataByID(Alicornification.ID).GetID(),
                 }
             }.BuildAndRegister();
 

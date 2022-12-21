@@ -37,7 +37,7 @@ namespace Equestrian.MonsterCards
                 CharacterID = CharID,
                 NameKey = "Pony_Unit_BackgroundPony_Name_Key",
                 Size = 1,
-                Health = 15,
+                Health = 12,
                 AttackDamage = 0,
                 PriorityDraw = false,
                 AssetPath = "MonsterAssets/BackgroundPonyUnit.png",

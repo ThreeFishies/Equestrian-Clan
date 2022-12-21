@@ -71,8 +71,8 @@ namespace Equestrian.SpellCards
                                 new CharacterTriggerDataBuilder
                                 {
                                     Trigger = CharacterTriggerData.Trigger.OnUnscaledSpawn,
-                                    //DisplayEffectHintText = false,
-                                    //HideTriggerTooltip = true,
+                                    DisplayEffectHintText = false,
+                                    HideTriggerTooltip = true,
 
                                     EffectBuilders = new List<CardEffectDataBuilder>
                                     {

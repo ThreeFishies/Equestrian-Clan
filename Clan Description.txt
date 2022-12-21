@@ -14,6 +14,8 @@ Features:
 *A clan-specific unit upgrade
 *Extensive lore
 *A new cavern event
+*12 new mutators (4 require DLC)
+*5 new expert challenges (2 require DLC)
 *In case you don't have enough ponies, there's a button that gives you more ponies.
 
 With tiny units and a new over-stacking mechanic, the Equestrain clan focuses on piling as many units as possible onto a single floor and using party-wide spells to support them. The more units that you can stack together, the more powerful they can become, and the stronger the magic will be that you have access to.
@@ -22,9 +24,70 @@ This clan was designed for use with the DLC content, but does not require it. Pl
 
 
 
-Note:
+Mutators:
+
+Adaptive Foes:
+ - 50% chance to swap the attack and heatlh of non-boss enemy units when they spawn.
+
+Bubbles:
+ - All units gain Spell Shield 1.
+
+Bureaucracy:
+ - All spells without Herd gain Herd 3. Train Stewards reduced in size by 1.
+
+Call the Cavalry:
+ - Gain three relics from the Equestrian clan, allowing you to gain a powerful pony unit each turn.
+
+Desertion:
+ - Banner units gain Purge.
+
+Divine Void (DLC required):
+ - The Seraph will always be the final boss, regardless of pact shards.
+
+Gender Reveal:
+ - The gender of each unit will be revealed when they enter the train.
+
+Group Hug:
+ - All units gain Social.
+
+Omnipresence (DLC required):
+ - The Last Divinity will always be the final boss, regardless of pact shards.
+
+Ready for Anything (DLC required):
+ - Start with Blank Pages and Shard of Divinity.
+
+Worth It (DLC required):
+ - Start with 50 pact shards and self-infused Train Stewards.
+
+You've Got Mail:
+ - Add a random spell card with Purge from a non-allied clan to your hand each turn.
+
+
+
+Expert Challenges:
+
+PONIES TAKE OVER:
+ - Mutators: Desertion, Fallen Champion, Call the Cavalry
+
+Red Tape
+ - Mutators: Bureaucracy, Group Hug, Come Prepared
+
+Some Divinity (DLC required)
+ - Mutators: Shardless, Omnipresence
+
+I Just Don't Know What Went Wrong (DLC required)
+ - Mutators: Worth It, Bubbles, You've Got Mail
+
+Gender Reveal Party
+ - Mutators: Gender Reveal, Slow and Steady, Wand of Cure Light Wounds
+
+
+
+Notes:
 
 Any custom clan is a significant addition to the game. This *will* result in increased loading times. Please be patient, as it can take some time to round up all the little ponies and send them to Hell!
+
+Equestrian mutators have colorful borders to help distinguish them. Mutators are sorted in alphabetical order, while the new expert challenges are added to the end of the list. Expert challenges are unlocked at covenant level 25. Check the patch notes for a full list of changes.
 
 
 
@@ -50,3 +113,9 @@ Art:
 Art assets were generally taken from the screenshot archives here: https://mlp.fandom.com/wiki/My_Little_Pony_Friendship_is_Magic_Wiki
 
 They've been edited for use Monster Train, and some already adapted versions come from the archives of Derpibooru as well.
+
+
+
+GitHub:
+
+https://github.com/ThreeFishies/Equestrian-Clan

@@ -63,6 +63,7 @@ namespace Trainworks.Builders
 			CharacterChatterData chatter = ScriptableObject.CreateInstance<CharacterChatterData>();
 			//CharacterChatterData baseData = ScriptableObject.CreateInstance<CharacterChatterData>();
 			Traverse.Create(chatter).Field("baseData").SetValue(chatter);
+			Traverse.Create(chatter).Field("gender").SetValue(gender);
 
 			chatter.name = name;
 

@@ -9,6 +9,7 @@ using Trainworks.Enums;
 using Equestrian;
 using CustomEffects;
 using UnityEngine;
+using HarmonyLib;
 
 namespace Equestrian.Enhancers
 {
@@ -67,6 +68,8 @@ namespace Equestrian.Enhancers
                     }
                 }
             }.BuildAndRegister();
+
+            AccessTools.Field(typeof(GameData),"id").SetValue(FriendstoneData,EnhancerID);
 
             return FriendstoneData;
         }

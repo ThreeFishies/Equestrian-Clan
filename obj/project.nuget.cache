@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "AlrLj+nZEZ2WSTEwma4+VPrlfoDesLvaeyRI+wY3Q/HNEoNhHszlh4a+/QB3WoLDHe+y/DceHqnBPqgRVJgKdA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dnordstr\\Documents\\Cardmod_Sandbox - 1.1.0\\EquestrianClan.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dnordstr\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\dnordstr\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -18,6 +18,14 @@ namespace Equestrian.HarmonyPatches
 		{
 			string text = StatusEffectManager.GetLocalizedName("social", 1, false, true, false);
 			if (title == text) { icon = ""; }
+			text = StatusEffectManager.GetLocalizedName("male", 1, false, true, false);
+			if (title == text) { icon = ""; }
+			text = StatusEffectManager.GetLocalizedName("female", 1, false, true, false);
+			if (title == text) { icon = ""; }
+			text = StatusEffectManager.GetLocalizedName("genderless", 1, false, true, false);
+			if (title == text) { icon = ""; }
+			text = StatusEffectManager.GetLocalizedName("undefined", 1, false, true, false);
+			if (title == text) { icon = ""; }
 			//Ponies.Log($"Icon Removal Service: title={title}, text={text}" );
 		}
 	}

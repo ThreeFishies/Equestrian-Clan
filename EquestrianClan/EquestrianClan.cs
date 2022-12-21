@@ -50,6 +50,7 @@ namespace Equestrian
 		public static readonly string BannerID = EquestrianClan.ID + "_Banner";
 		public static readonly string RewardID = EquestrianClan.ID + "_BannerReward";
 		public static CardPool draftPool = UnityEngine.ScriptableObject.CreateInstance<CardPool>();
+		public static RewardNodeData data;
 
 		public static void buildbanner()
 		{
@@ -66,7 +67,7 @@ namespace Equestrian
 
 			Ponies.Log("Banner Card Pool");
 
-			new RewardNodeDataBuilder
+			data = new RewardNodeDataBuilder
 			{
 				RewardNodeID = BannerID,
 				MapNodePoolIDs = new List<string>

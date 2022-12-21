@@ -115,14 +115,22 @@ namespace GivePony
 				MoveZ = 0.0f;
 			}
 
-			gameObject.transform.position = new Vector3(Mathf.LerpUnclamped(value3.transform.position.x, value2.transform.position.x, 1.75f)+MoveX, Mathf.LerpUnclamped(value3.transform.position.y, value2.transform.position.y, -0.1f)+MoveY, gameObject.transform.position.z+MoveZ);
-
+			if (CollisionAvoider.hasMoveBattleUI)
+			{
+				//The UI has been moved. Put the button in a better location.
+				gameObject.transform.position = new Vector3(value.transform.position.x + -325.80f, value.transform.position.y + 75.90f, gameObject.transform.position.z + MoveZ);
+			}
+			else
+			{
+				//Default location.
+				gameObject.transform.position = new Vector3(Mathf.LerpUnclamped(value3.transform.position.x, value2.transform.position.x, 1.75f) + MoveX, Mathf.LerpUnclamped(value3.transform.position.y, value2.transform.position.y, -0.1f) + MoveY, gameObject.transform.position.z + MoveZ);
+			}
 			//Ponies.Log($"x, y, z: {Mathf.LerpUnclamped(value3.transform.position.x, value2.transform.position.x, 1.75f)}, {Mathf.LerpUnclamped(value3.transform.position.y, value2.transform.position.y, -0.1f)}, {gameObject.transform.position.z}");
 
 			gameObject.transform.localScale = new Vector3(0.6f, 0.6f, gameObject.transform.localScale.z);
 			GameUISelectableButton component = gameObject.GetComponent<GameUISelectableButton>();
 			Traverse.Create(component).Field("inputType").SetValue(0);
-			gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Give Pony";
+			gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Give_Pony_Button_Text".Localize();
 			component.gameObject.AddComponent<GivePonyButton>();
 		}
 

@@ -42,5 +42,14 @@ namespace Equestrian.MonsterCards
             CustomCharacterManager.RegisterSubtype(Key, "Dragon");
         }
     }
+    class SubtypeTrap
+    {
+        public static readonly string Key = Ponies.GUID + "_Subtype_Trap";
+
+        public static void BuildAndRegister()
+        {
+            CustomCharacterManager.RegisterSubtype(Key, "Trap");
+        }
+    }
 
 }

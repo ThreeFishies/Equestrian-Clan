@@ -118,7 +118,7 @@ namespace Equestrian.PonyStory
                 name = "FlowerPonies",
                 storyId = "FlowerPonies",
                 knotName = "FlowerPonies",
-                priorityTicketCount = 25,
+                priorityTicketCount = 20,
                 eventPrefab = flowerPoniesFrame,
                 possibleRewards = new List<RewardData>
                 {

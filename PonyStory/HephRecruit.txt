@@ -1,0 +1,110 @@
+"HephRecruit":
+	[
+		[
+			"^<style=\"Body\">The <color=\"blue\"><anim=shake>shivering blacksmith</anim></color> braces against the stinging wind. From afar one would easily mistake her for a small mountain.",
+			"\n",
+			"^“It's not like I <i>want</i> to come out here, you know. Just - you always come by the Forge at the worst times and it's always so much business that I forget some of the other <i>more important</i> things I'm working on.\"",
+			"\n",
+			"^“Well, hrmm, anyways, I'm working on something new. A hammer of sorts. And yes, before you can ask, she'll help out you and your sorry lot. It's just, uh... well, she doesn't work like she should. Got a bit of a mind of her own. So, I figure you could take her with you and help <i>me</i> out for once. Just needs a little 'fine-tuning' is all. Hitting those birds around 5 times oughta do the trick.\"</style>",
+			"\n",
+			"^<style=\"Prompt\">“So, err, you up for a little 'fine-tuning'?”</style>",
+			"\n",
+			"ev",
+				"str",
+					"^TakeHammer",
+				"/str",
+			"/ev",
+			{"*":".^.c-0","flg":4},
+			"ev",
+				"str",
+					"^RefuseHammer",
+				"/str",
+			"/ev",
+			{"*":".^.c-1","flg":4},
+			{"c-0":
+				[
+					"\n",
+					"ev",
+						1,
+					"/ev",
+					{"VAR=":"HammerTaken","re":true},
+					"^<style=\"Body\">\"Terrific. I'm just bursting with excitement...\"",
+					"\n",
+					"^\"Just try and be gentle with her, eh? Or, at least a little less hard on it than you usually are with these things.\"</style>",
+					"\n",
+					"^>>>GIVE_REWARD: HephHammerReward, quiet",
+					"\n",
+					{"->":".^.^.g-0"},
+					{"#f":7}
+				],
+			"c-1":
+				[
+					"\n",
+					{"->":".^.^.^.Upgrade"},
+					{"->":".^.^.g-0"},
+					{"#f":7}
+				],
+			"g-0":
+				[
+					"end",
+					{"#f":7}
+				]
+			}
+		],
+		{"Upgrade":
+			[
+				[
+					"^<style=\"Body\">\"Heh, guess it was a little foolish of me to think you'd start being the selfless type... No matter. I'll still help you out.\"",
+					"\n",
+					"^\"And just to prove I'm still the <i>giving one</i> in this relationship, here's something that might help you out.\"</style>",
+					"\n",
+					"^<style=\"Prompt\">“Will you at least take this?”</style>",
+					"\n",
+					"ev",
+						"str",
+							"^TakeUpgrade",
+						"/str",
+						"str",
+							"^OnlyUnitExcludingChamps",
+						"/str",
+						{"x()":"CardsAvailableWithFilter","exArgs":1},
+					"/ev",
+					{"*":".^.c-0","flg":5},
+					"ev",
+						"str",
+							"^Leave",
+						"/str",
+					"/ev",
+					{"*":".^.c-1","flg":4},
+					{"c-0":
+						[
+							"\n",
+							"^<style=\"Body\">\"Fantastic. I give. You take. And Hell keeps freezing. All as it should be...\"",
+							"\n",
+							"^\"Ughhh...don't mind me. It's no bother. I just get a bit gruff sometimes is all. It's just <i>so. <smallcaps>Damn. <anim=shake>Cooooold.</anim></smallcaps></i>\"",
+							"\n",
+							{"->":".^.^.g-0"},
+							{"#f":7}
+						],
+					"c-1":
+						[
+							"\n",
+							"^<style=\"Body\">\"Hmmph. Figures, I suppose. Can't fix what wants to stay broken.\"",
+							"\n",
+							"^\"See you at the Forge.\"</style>",
+							"\n",
+							{"->":".^.^.g-0"},
+							{"#f":7}
+						],
+					"g-0":
+						[
+							"end",
+							{"#f":7}
+						]
+					}
+				],
+				{"#f":3}
+			],
+			"#f":3
+		}
+	]
