@@ -40,6 +40,7 @@ namespace Equestrian.Mutators
                 "Pony_Mutator_DivineOmnipresence_Lore_Key"
             };
             AccessTools.Field(typeof(MutatorData), "relicLoreTooltipKeys").SetValue(divineOmnipresenceMutatorData, relicLoreTooltipKeys);
+            AccessTools.Field(typeof(MutatorData), "relicLoreTooltipStyle").SetValue(divineOmnipresenceMutatorData, Ponies.PonyRelicTooltip.GetEnum());
             AccessTools.Field(typeof(MutatorData), "relicActivatedKey").SetValue(divineOmnipresenceMutatorData, "Pony_Mutator_DivineOmnipresence_Activated_Key");
             AccessTools.Field(typeof(MutatorData), "divineVariant").SetValue(divineOmnipresenceMutatorData, false);
             AccessTools.Field(typeof(MutatorData), "boonValue").SetValue(divineOmnipresenceMutatorData, -2);

@@ -40,37 +40,84 @@ namespace Equestrian.Champions
 					"Pony_Champion_MareaLee_Chatter_Idle_7_Key",
 					"Pony_Champion_MareaLee_Chatter_Idle_8_Key",
 					"Pony_Champion_MareaLee_Chatter_Idle_9_Key",
-				},
+                    "Pony_Champion_MareaLee_Chatter_Idle_10_Key",
+                },
 
 				characterAddedExpressionKeys = new List<string>()
 				{
-					"Pony_Champion_MareaLee_Chatter_Added_1_Key"
-				},
+					"Pony_Champion_MareaLee_Chatter_Added_1_Key",
+                    "Pony_Champion_MareaLee_Chatter_Added_2_Key",
+                    "Pony_Champion_MareaLee_Chatter_Added_3_Key",
+                    "Pony_Champion_MareaLee_Chatter_Added_4_Key"
+                },
 
 				characterAttackingExpressionKeys = new List<string>()
 				{
-					"Pony_Champion_MareaLee_Chatter_Attacking_1_Key"
-				},
+					"Pony_Champion_MareaLee_Chatter_Attacking_1_Key",
+                    "Pony_Champion_MareaLee_Chatter_Attacking_2_Key",
+                    "Pony_Champion_MareaLee_Chatter_Attacking_3_Key",
+                    "Pony_Champion_MareaLee_Chatter_Attacking_4_Key",
+                    "Pony_Champion_MareaLee_Chatter_Attacking_5_Key",
+                    "Pony_Champion_MareaLee_Chatter_Attacking_6_Key",
+                    "Pony_Champion_MareaLee_Chatter_Attacking_7_Key",
+                    "Pony_Champion_MareaLee_Chatter_Attacking_8_Key"
+                },
 
 				characterSlayedExpressionKeys = new List<string>()
 				{
-					"Pony_Champion_MareaLee_Chatter_Slayed_1_Key"
-				},
+                    "Pony_Champion_MareaLee_Chatter_Slayed_1_Key",
+                    "Pony_Champion_MareaLee_Chatter_Slayed_2_Key",
+                    "Pony_Champion_MareaLee_Chatter_Slayed_3_Key",
+                    "Pony_Champion_MareaLee_Chatter_Slayed_4_Key"
+                },
 
 				characterTriggerExpressionKeys = new List<CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys>()
 				{
+					//Post Combat and Slayed happen at similar times, but Mare a Lee's not as likely to get kills so I'll leav it be.
 					new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys
 					{
 						Trigger = CharacterTriggerData.Trigger.PostCombat,
 						Key = "Pony_Champion_MareaLee_Chatter_Trigger_PostCombat_1_Key",
 					},
-					new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys
-					{
-						Trigger = CharacterTriggerData.Trigger.EndTurnPreHandDiscard,
-						Key = "Pony_Champion_MareaLee_Chatter_Trigger_EndOfTurn_1_Key",
-					}
-				},
+                    new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys
+                    {
+                        Trigger = CharacterTriggerData.Trigger.PostCombat,
+                        Key = "Pony_Champion_MareaLee_Chatter_Trigger_PostCombat_2_Key",
+                    },
+                    new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys
+                    {
+                        Trigger = CharacterTriggerData.Trigger.PostCombat,
+                        Key = "Pony_Champion_MareaLee_Chatter_Trigger_PostCombat_3_Key",
+                    },
+                    new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys
+                    {
+                        Trigger = CharacterTriggerData.Trigger.PostCombat,
+                        Key = "Pony_Champion_MareaLee_Chatter_Trigger_PostCombat_4_Key",
+                    },
 
+					//End of turn and attacking happen at similar times.
+					//Moving to Attacking to reduce chatter spam.
+					//new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys
+					//{
+					//	Trigger = CharacterTriggerData.Trigger.EndTurnPreHandDiscard,
+					//	Key = "Pony_Champion_MareaLee_Chatter_Trigger_EndOfTurn_1_Key",
+					//},
+                    //new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys
+                    //{
+                    //    Trigger = CharacterTriggerData.Trigger.EndTurnPreHandDiscard,
+                    //    Key = "Pony_Champion_MareaLee_Chatter_Trigger_EndOfTurn_2_Key",
+                    //},
+                    //new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys
+                    //{
+                    //    Trigger = CharacterTriggerData.Trigger.EndTurnPreHandDiscard,
+                    //    Key = "Pony_Champion_MareaLee_Chatter_Trigger_EndOfTurn_3_Key",
+                    //},
+                    //new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys
+                    //{
+                    //    Trigger = CharacterTriggerData.Trigger.EndTurnPreHandDiscard,
+                    //    Key = "Pony_Champion_MareaLee_Chatter_Trigger_EndOfTurn_4_Key",
+                    //}
+				},
 			}.Build();
 
 			CharacterDataBuilder champion = new CharacterDataBuilder

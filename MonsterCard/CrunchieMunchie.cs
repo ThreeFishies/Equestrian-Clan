@@ -46,17 +46,26 @@ namespace Equestrian.MonsterCards
 
                     characterAddedExpressionKeys = new List<string>() 
                     {
-                        "Pony_Unit_CrunchieMunchie_Chatter_Added_1_Key"
+                        "Pony_Unit_CrunchieMunchie_Chatter_Added_1_Key",
+                        "Pony_Unit_CrunchieMunchie_Chatter_Added_2_Key",
+                        "Pony_Unit_CrunchieMunchie_Chatter_Added_3_Key",
+                        "Pony_Unit_CrunchieMunchie_Chatter_Added_4_Key"
                     },
 
                     characterAttackingExpressionKeys = new List<string>() 
                     {
-                        "Pony_Unit_CrunchieMunchie_Chatter_Attacking_1_Key"
+                        "Pony_Unit_CrunchieMunchie_Chatter_Attacking_1_Key",
+                        "Pony_Unit_CrunchieMunchie_Chatter_Attacking_2_Key",
+                        "Pony_Unit_CrunchieMunchie_Chatter_Attacking_3_Key",
+                        "Pony_Unit_CrunchieMunchie_Chatter_Attacking_4_Key"
                     },
 
                     characterSlayedExpressionKeys = new List<string>() 
                     {
-                        "Pony_Unit_CrunchieMunchie_Chatter_Slayed_1_Key"
+                        "Pony_Unit_CrunchieMunchie_Chatter_Slayed_1_Key",
+                        "Pony_Unit_CrunchieMunchie_Chatter_Slayed_2_Key",
+                        "Pony_Unit_CrunchieMunchie_Chatter_Slayed_3_Key",
+                        "Pony_Unit_CrunchieMunchie_Chatter_Slayed_4_Key"
                     },
 
                     characterIdleExpressionKeys = new List<string>() 
@@ -76,6 +85,21 @@ namespace Equestrian.MonsterCards
                         new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
                         {
                             Key = "Pony_Unit_CrunchieMunchie_Chatter_Trigger_PostCombat_1_Key",
+                            Trigger = CharacterTriggerData.Trigger.PostCombat
+                        },
+                        new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        {
+                            Key = "Pony_Unit_CrunchieMunchie_Chatter_Trigger_PostCombat_2_Key",
+                            Trigger = CharacterTriggerData.Trigger.PostCombat
+                        },
+                        new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        {
+                            Key = "Pony_Unit_CrunchieMunchie_Chatter_Trigger_PostCombat_3_Key",
+                            Trigger = CharacterTriggerData.Trigger.PostCombat
+                        },
+                        new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        {
+                            Key = "Pony_Unit_CrunchieMunchie_Chatter_Trigger_PostCombat_4_Key",
                             Trigger = CharacterTriggerData.Trigger.PostCombat
                         }
                     }
@@ -125,7 +149,7 @@ namespace Equestrian.MonsterCards
                 Targetless = false,
                 AssetPath = "MonsterAssets/CrunchieMunchieCard.png",
                 ClanID = EquestrianClan.ID,
-                CardPoolIDs = new List<string> { "ConscriptUnitPool" },
+                CardPoolIDs = new List<string> {  }, //Adding "ConscriptUnitPool" here does not actually work.
                 CardLoreTooltipKeys = new List<string>
                 {
                     "Pony_Unit_CrunchieMunchie_Lore_Key"

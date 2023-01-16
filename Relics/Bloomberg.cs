@@ -17,6 +17,7 @@ namespace Equestrian.Relic
     class Bloomberg
     {
         public static readonly string ID = Ponies.GUID + "_Bloomberg";
+        //public static RelicData relicData;
 
         public static void BuildAndRegister()
         {
@@ -92,6 +93,8 @@ namespace Equestrian.Relic
                 UnlockLevel = 0,
                 
             }.BuildAndRegister();
+
+            AccessTools.Field(typeof(CollectableRelicData), "relicLoreTooltipStyle").SetValue(bloombergData, Ponies.PonyRelicTooltip.GetEnum());
         }
     }
 }

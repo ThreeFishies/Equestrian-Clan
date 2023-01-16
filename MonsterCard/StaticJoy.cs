@@ -46,16 +46,29 @@ namespace Equestrian.MonsterCards
                     characterAddedExpressionKeys = new List<string>() 
                     {
                         "Pony_Unit_StaticJoy_Chatter_Added_1_Key",
+                        "Pony_Unit_StaticJoy_Chatter_Added_2_Key",
+                        "Pony_Unit_StaticJoy_Chatter_Added_3_Key",
+                        "Pony_Unit_StaticJoy_Chatter_Added_4_Key"
                     },
 
                     characterAttackingExpressionKeys = new List<string>() 
                     {
                         "Pony_Unit_StaticJoy_Chatter_Attacking_1_Key",
+                        "Pony_Unit_StaticJoy_Chatter_Attacking_2_Key",
+                        "Pony_Unit_StaticJoy_Chatter_Attacking_3_Key",
+                        "Pony_Unit_StaticJoy_Chatter_Attacking_4_Key",
+                        "Pony_Unit_StaticJoy_Chatter_Attacking_5_Key",
+                        "Pony_Unit_StaticJoy_Chatter_Attacking_6_Key",
+                        "Pony_Unit_StaticJoy_Chatter_Attacking_7_Key",
+                        "Pony_Unit_StaticJoy_Chatter_Attacking_8_Key"
                     },
 
                     characterSlayedExpressionKeys = new List<string>() 
                     {
                         "Pony_Unit_StaticJoy_Chatter_Slayed_1_Key",
+                        "Pony_Unit_StaticJoy_Chatter_Slayed_2_Key",
+                        "Pony_Unit_StaticJoy_Chatter_Slayed_3_Key",
+                        "Pony_Unit_StaticJoy_Chatter_Slayed_4_Key"
                     },
 
                     characterIdleExpressionKeys = new List<string>() 
@@ -72,11 +85,28 @@ namespace Equestrian.MonsterCards
 
                     characterTriggerExpressionKeys = new List<CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys>()
                     { 
-                        new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
-                        {
-                            Key = "Pony_Unit_StaticJoy_Chatter_Trigger_OnAttacking_1_Key",
-                            Trigger = CharacterTriggerData.Trigger.OnAttacking,
-                        }
+                        //Don't mix Attacking with OnAttacking or they'll try to say two different things at the same time.
+                        //Merging with Attacking.
+                        //new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        //{
+                        //    Key = "Pony_Unit_StaticJoy_Chatter_Trigger_OnAttacking_1_Key",
+                        //    Trigger = CharacterTriggerData.Trigger.OnAttacking,
+                        //},
+                        //new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        //{
+                        //    Key = "Pony_Unit_StaticJoy_Chatter_Trigger_OnAttacking_2_Key",
+                        //    Trigger = CharacterTriggerData.Trigger.OnAttacking,
+                        //},
+                        //new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        //{
+                        //    Key = "Pony_Unit_StaticJoy_Chatter_Trigger_OnAttacking_3_Key",
+                        //    Trigger = CharacterTriggerData.Trigger.OnAttacking,
+                        //},
+                        //new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        //{
+                        //    Key = "Pony_Unit_StaticJoy_Chatter_Trigger_OnAttacking_4_Key",
+                        //    Trigger = CharacterTriggerData.Trigger.OnAttacking,
+                        //}
                     }
                 }.Build(),
 

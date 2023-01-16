@@ -51,7 +51,8 @@ namespace Equestrian.MonsterCards
 
                     characterSlayedExpressionKeys = new List<string>()
                     {
-                        "Pony_Unit_LordOfEmber_Chatter_Slayed_1_Key"
+                        "Pony_Unit_LordOfEmber_Chatter_Slayed_1_Key",
+                        "Pony_Unit_LordOfEmber_Chatter_Slayed_2_Key"
                     },
 
                     characterIdleExpressionKeys = new List<string>()
@@ -64,11 +65,13 @@ namespace Equestrian.MonsterCards
                     
                     characterTriggerExpressionKeys = new List<CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys>() 
                     {
-                        new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
-                        {
-                            Key = "Pony_Unit_LordOfEmber_Chatter_Trigger_OnKill_1_Key",
-                            Trigger = CharacterTriggerData.Trigger.OnKill
-                        }
+                        //OnKill and Slayed trigger at the same time.
+                        //Moving to Slayed to reduce chatter spam.
+                        //new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        //{
+                        //    Key = "Pony_Unit_LordOfEmber_Chatter_Trigger_OnKill_1_Key",
+                        //    Trigger = CharacterTriggerData.Trigger.OnKill
+                        //}
                     }
                 }.Build(),
                 

@@ -115,6 +115,7 @@ namespace Equestrian.Mutators
                 "Pony_Mutator_Bureaucracy_Lore_Key"
             };
             AccessTools.Field(typeof(MutatorData), "relicLoreTooltipKeys").SetValue(bureaucracyMutatorData, relicLoreTooltipKeys);
+            AccessTools.Field(typeof(MutatorData), "relicLoreTooltipStyle").SetValue(bureaucracyMutatorData, Ponies.PonyRelicTooltip.GetEnum());
             AccessTools.Field(typeof(MutatorData), "relicActivatedKey").SetValue(bureaucracyMutatorData, "Pony_Mutator_Bureaucracy_Activated_Key");
             AccessTools.Field(typeof(MutatorData), "divineVariant").SetValue(bureaucracyMutatorData, false);
             AccessTools.Field(typeof(MutatorData), "boonValue").SetValue(bureaucracyMutatorData, -8);

@@ -35,24 +35,34 @@ namespace Trainworks.Builders
 		public List<string> characterAttackingExpressionKeys = new List<string>() { };
 
 		/// <summary>
-		/// What the character can say upon being defeated.
+		/// What the character can say upon scoring a kill.
 		/// </summary>
 		public List<string> characterSlayedExpressionKeys = new List<string>() { };
 
 		/// <summary>
-		/// What the character can say during the player's turn.
+		/// What the character can say during the player's turn.<br></br>
+		/// Note: These are the only chatter messages that can appear when the game speed is set to Super Ultra.
 		/// </summary>
 		public List<string> characterIdleExpressionKeys = new List<string>() { };
 
 		/// <summary>
-		/// What the character can say when preforming specific, triggered actions. Each trigger can have its own list of sayings.
+		/// What the character can say when preforming specific, triggered actions. Each trigger can have its own list of sayings.<br></br>
+		/// Note: Chatter triggers are independent of any triggered abilities the characters have.<br></br>
+		/// Note: Triggers that overlap can fire off multiple chatter messages at the same time, leading to chatter clutter.<br></br>
+		/// Thus, I advise against configuring both OnAttacking and, say, characterAttacking expression keys at the same time.
 		/// </summary>
 		public List<CharacterTriggerDataChatterExpressionKeys> characterTriggerExpressionKeys = new List<CharacterTriggerDataChatterExpressionKeys>() { };
 
 		[Serializable]
 		public struct CharacterTriggerDataChatterExpressionKeys
         {
+			/// <summary>
+			/// The character trigger that will activate the chatter message.
+			/// </summary>
 			public CharacterTriggerData.Trigger Trigger { get; set; }
+			/// <summary>
+			/// The localization key.
+			/// </summary>
 			public string Key { get; set; }
         }
 

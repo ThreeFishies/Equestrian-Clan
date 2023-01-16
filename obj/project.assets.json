@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dnordstr\\Documents\\Cardmod_Sandbox - 1.1.0\\EquestrianClan.csproj",
+      "projectUniqueName": "C:\\Users\\dnordstr\\source\\repos\\ThreeFishies\\Equestrian-Clan\\EquestrianClan.csproj",
       "projectName": "EquestrianClan",
-      "projectPath": "C:\\Users\\dnordstr\\Documents\\Cardmod_Sandbox - 1.1.0\\EquestrianClan.csproj",
+      "projectPath": "C:\\Users\\dnordstr\\source\\repos\\ThreeFishies\\Equestrian-Clan\\EquestrianClan.csproj",
       "packagesPath": "C:\\Users\\dnordstr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dnordstr\\Documents\\Cardmod_Sandbox - 1.1.0\\obj\\",
+      "outputPath": "C:\\Users\\dnordstr\\source\\repos\\ThreeFishies\\Equestrian-Clan\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dnordstr\\AppData\\Roaming\\NuGet\\NuGet.Config",

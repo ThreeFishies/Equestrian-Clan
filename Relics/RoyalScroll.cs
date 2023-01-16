@@ -16,10 +16,11 @@ namespace Equestrian.Relic
     class RoyalScroll
     {
         public static readonly string ID = Ponies.GUID + "_RoyalScrollRelic";
+        public static RelicData relicData;
 
         public static void BuildAndRegister()
         {
-            new CollectableRelicDataBuilder
+            relicData = new CollectableRelicDataBuilder
             {
                 CollectableRelicID = ID,
                 NameKey = "Pony_Relic_RoyalScroll_Name_Key",
@@ -88,6 +89,8 @@ namespace Equestrian.Relic
                 //RelicActivatedKey = "Pony_Relic_RoyalScroll_Activated_Key",
                 UnlockLevel = 0,
             }.BuildAndRegister();
+
+            AccessTools.Field(typeof(RelicData), "relicLoreTooltipStyle").SetValue(relicData, Ponies.PonyRelicTooltip.GetEnum());
         }
     }
 }

@@ -111,6 +111,7 @@ namespace Equestrian.Mutators
                 "Pony_Mutator_Desertion_Lore_Key"
             };
             AccessTools.Field(typeof(MutatorData), "relicLoreTooltipKeys").SetValue(desertionMutatorData, relicLoreTooltipKeys);
+            AccessTools.Field(typeof(MutatorData), "relicLoreTooltipStyle").SetValue(desertionMutatorData, Ponies.PonyRelicTooltip.GetEnum());
             AccessTools.Field(typeof(MutatorData), "relicActivatedKey").SetValue(desertionMutatorData, "Pony_Mutator_Desertion_Activated_Key");
             AccessTools.Field(typeof(MutatorData), "divineVariant").SetValue(desertionMutatorData, false);
             AccessTools.Field(typeof(MutatorData), "boonValue").SetValue(desertionMutatorData, -10);

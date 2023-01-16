@@ -110,6 +110,7 @@ namespace Equestrian.Mutators
                 "Pony_Mutator_GroupHug_Lore_Key"
             };
             AccessTools.Field(typeof(MutatorData), "relicLoreTooltipKeys").SetValue(groupHugMutatorData, relicLoreTooltipKeys);
+            AccessTools.Field(typeof(MutatorData), "relicLoreTooltipStyle").SetValue(groupHugMutatorData, Ponies.PonyRelicTooltip.GetEnum());
             AccessTools.Field(typeof(MutatorData), "relicActivatedKey").SetValue(groupHugMutatorData, "Pony_Mutator_GroupHug_Activated_Key");
             AccessTools.Field(typeof(MutatorData), "divineVariant").SetValue(groupHugMutatorData, false);
             AccessTools.Field(typeof(MutatorData), "boonValue").SetValue(groupHugMutatorData, 6);

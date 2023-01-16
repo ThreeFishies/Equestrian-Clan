@@ -81,6 +81,14 @@ namespace Equestrian.MonsterCards
                 LinkedClass = Ponies.EquestrianClanData,
                 IgnoreWhenCountingMastery = true,
 
+                TraitBuilders = new List<CardTraitDataBuilder>
+                {
+                    new CardTraitDataBuilder
+                    {
+                        TraitStateName = typeof(CustomCardTraitHerb).AssemblyQualifiedName
+                    }
+                },
+
                 EffectBuilders = new List<CardEffectDataBuilder>
                 {
                     new CardEffectDataBuilder

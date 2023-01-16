@@ -16,10 +16,11 @@ namespace Equestrian.Relic
     class TinyMouseCrutches
     {
         public static readonly string ID = Ponies.GUID + "_TinyMouseCrutchesRelic";
+        public static RelicData relicData;
 
         public static void BuildAndRegister()
         {
-            new CollectableRelicDataBuilder
+            relicData = new CollectableRelicDataBuilder
             {
                 CollectableRelicID = ID,
                 NameKey = "Pony_Relic_TinyMouseCrutches_Name_Key",
@@ -54,6 +55,8 @@ namespace Equestrian.Relic
                 },
                 //UnlockLevel = 6,
             }.BuildAndRegister();
+
+            AccessTools.Field(typeof(RelicData), "relicLoreTooltipStyle").SetValue(relicData, Ponies.PonyRelicTooltip.GetEnum());
         }
     }
 }

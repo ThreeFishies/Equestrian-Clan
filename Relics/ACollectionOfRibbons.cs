@@ -16,10 +16,11 @@ namespace Equestrian.Unused
     class ACollectionOfRibbons
     {
         public static readonly string ID = Ponies.GUID + "_ACollectionOfRibbonsRelic";
+        public static RelicData relicData;
 
         public static void BuildAndRegister()
         {
-            new CollectableRelicDataBuilder
+            relicData = new CollectableRelicDataBuilder
             {
                 CollectableRelicID = ID,
                 NameKey = "Pony_Relic_ACollectionOfRibbons_Name_Key",
@@ -65,6 +66,8 @@ namespace Equestrian.Unused
                 //UnlockLevel = 6,
                 RelicActivatedKey = "Pony_Relic_ACollectionOfRibbons_Activated_Key",
             }.BuildAndRegister();
+
+            AccessTools.Field(typeof(RelicData), "relicLoreTooltipStyle").SetValue(relicData, Ponies.PonyRelicTooltip.GetEnum());
         }
     }
 }

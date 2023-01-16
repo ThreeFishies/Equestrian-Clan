@@ -63,7 +63,7 @@ namespace CustomEffects
 
             if (!TooltipContainer.TraitSupportedInTooltips("CardTraitHerb"))
             {
-                Ponies.Log("Attempt to register CardTraitHerb failed.");
+                //Ponies.Log("Attempt to register CardTraitHerb failed.");
             }
         }
     }

@@ -30,6 +30,9 @@ using Equestrian.PonyStory;
 using Equestrian.Mutators;
 using Equestrian.Metagame;
 using GivePony;
+using static UnityEngine.TouchScreenKeyboard;
+using TMPro;
+using Equestrian.Chatter;
 
 namespace Equestrian.Init
 {
@@ -47,7 +50,7 @@ namespace Equestrian.Init
         
         public const string GUID = "mod.equestrian.clan.monstertrain";
         public const string NAME = "Equestrian Clan";
-        public const string VERSION = "1.1.0";
+        public const string VERSION = "1.2.0";
         public static ClassData EquestrianClanData;
         public static CardPool BGPonyPool;
         public static EnhancerData FriendstoneData = ScriptableObject.CreateInstance<EnhancerData>();
@@ -55,9 +58,12 @@ namespace Equestrian.Init
         public static bool HallowedHallsInEffect = false; //Flag needed by the social mechanic to work around a Hallowed Halls bug.
         //public static SpawnPoint LastMovedUnit = null;
         //public static bool PanicFlag = false;
-        public static bool EquestrianClanIsInit = false; //Very important! If a patched method is invoked by another mod before the Equestrian Clan is loaded, this can cause crashes. Always check first to ensure data is loaded first before referencing any pony-specific data.
+        public static bool EquestrianClanIsInit = false; //Very important! If a patched method is invoked by another mod before the Equestrian Clan is loaded, this can cause crashes. Always check to ensure data is loaded before referencing any pony-specific data.
         public static bool AttemptAResetFirst = true;
         public static PonyFrame PonyFrame; //This is for the clan's card mastery frame
+        public static PonyLoreTooltipType PonyLoreTooltip; //This will allow us to configure a custom tooltip background for pony lore tooltips.
+        public static PonyRelicTooltipType PonyRelicTooltip; //Also for relics
+        public static PonyHerdSelectionError PonyHerdSelectionError; //Show a custom error message for unplayable Herd Spells
         //public static GivePonyToggle givePonyToggle;
 
         //In order to make a loading screen work, the clan's loading process was moved from the default Trainworks location of AssetLoadingManager.Start().
@@ -100,6 +106,26 @@ namespace Equestrian.Init
             Ponies.Log("Genderless");
             StatusEffectUndefined.Make();
             Ponies.Log("Undefined");
+
+            //Extending the enum for tooltip types to include a pony lore tooltip.
+            PonyLoreTooltip = new PonyLoreTooltipType("loreTooltipPony");
+            Ponies.Log("Pony Lore Tooltip");
+
+            //Load assets and configure the lore tooltip design.
+            PonyLoreTooltipType.Initialize();
+            Ponies.Log("Initializing the pony lore tooltip design.");
+
+            //Relics also have an enum type that needs to be extended. Also works for Mutators.
+            PonyRelicTooltip = new PonyRelicTooltipType("relicTooltipPony");
+            Ponies.Log("Pony Relic Tooltip");
+
+            //Extends the enum for unplayable spell error messages.
+            PonyHerdSelectionError = new PonyHerdSelectionError("ponyHerdSelectionError");
+            Ponies.Log("Card Trait Herd Selection Error");
+
+            //Add the cutom error message to the dictionary.
+            PonyHerdSelectionError.Initialize();
+            Ponies.Log("Registering the card trait Herd error message.");
 
             //Starter Spell (exile)
             NightTerrors.BuildAndRegister();
@@ -297,6 +323,10 @@ namespace Equestrian.Init
             HephIsAFineAndDandyLADYThankYouVeryMuch.Fix();
             Ponies.Log("Stop Misgendering Heph");
 
+            //Update Conscription Notice
+            ConscriptionOfPonies.ConscriptThemPonies();
+            Ponies.Log("Updated Conscription Notice.");
+
             //Add equestrian variants for the starter spell 'Analog'
             ArcadianCompatibility.Initialize();
             Ponies.Log("Arcadian Stuff Complete.");
@@ -389,11 +419,49 @@ namespace Equestrian.Init
             CustomCardTraitHerb.RegisterTooltip();
             Ponies.Log("Registered card trait Herb in the list of traits supported by tooltips.");
 
+            //Add idle chatter messages to base units.
+            MakeThemChatter.DoIt();
+            Ponies.Log("Added additional idle chatter messages to champion units.");
+
+            //Attempt to register status icons for tooltip titles.
+            //The icons appear to be part of the TextMeshProUGUI toolkit.
+            //They are referenced by an atlas array full of confusing hash tables.
+            //They might be easy to edit if you had the developer's tools...
+            //But trying to edit this to add new values manually is a nightmare.
+            //MakeIconsWorkHopefully.LocalizeIcons(true);
+            //Ponies.Log("Loacalizing Status Effect icons.");
+
             //Clear the background 'Loading...' image and reset the game cursor back to normal.
             PonyLoader.HideImage();
             Ponies.Log("Ending Loading Image");
 
             //Event Data Mining
+            //ProviderManager.TryGetProvider<StatusEffectManager>(out StatusEffectManager statusEffectManager);
+            //string statusId = VanillaStatusEffectIDs.Armor;
+            //string title = TooltipUI.FormatTitleWithIcon(StatusEffectManager.GetLocalizedName(statusId, 1, false, true, false), statusEffectManager.GetTMPSpriteTag(statusId));
+            //Ponies.Log("Armor formatted title with icon:");
+            //Ponies.Log(title);
+            //Output: <color=#D9A122><sprite name="StatusArmor" tint=1></color> Armor
+            //statusId = VanillaStatusEffectIDs.Fragile;
+            //title = TooltipUI.FormatTitleWithIcon(StatusEffectManager.GetLocalizedName(statusId, 1, false, true, false), statusEffectManager.GetTMPSpriteTag(statusId));
+            //Ponies.Log("Fragile formatted title with icon:");
+            //Ponies.Log(title);
+            //Output: <color=#D9A122><sprite name="StatusFragile" tint=1></color> Fragile
+            //statusId = VanillaStatusEffectIDs.Regen;
+            //title = TooltipUI.FormatTitleWithIcon(StatusEffectManager.GetLocalizedName(statusId, 1, false, true, false), statusEffectManager.GetTMPSpriteTag(statusId));
+            //Ponies.Log("Regen formatted title with icon:");
+            //Ponies.Log(title);
+            //Output: <color=#88C701><sprite name="StatusRegen" tint=1></color> Regen
+            //statusId = VanillaStatusEffectIDs.Dazed;
+            //title = TooltipUI.FormatTitleWithIcon(StatusEffectManager.GetLocalizedName(statusId, 1, false, true, false), statusEffectManager.GetTMPSpriteTag(statusId));
+            //Ponies.Log("Dazed formatted title with icon:");
+            //Ponies.Log(title);
+            //Output: <color=#FD2D1D><sprite name="StatusDazed" tint=1></color> Dazed
+            //statusId = StatusEffectSocial.statusEffectData.GetStatusId();
+            //title = TooltipUI.FormatTitleWithIcon(StatusEffectManager.GetLocalizedName(statusId, 1, false, true, false), statusEffectManager.GetTMPSpriteTag(statusId));
+            //Ponies.Log("Social formatted title with icon:");
+            //Ponies.Log(title);
+            //Output: <color=#D9A122><sprite name="social" tint=1></color> <b>Social</b>
             //Ponies.Log("EventChoice_HephRecruit_TakeHammer".Localize());
             //Output: Fine-tuning is my middle name.
             //Ponies.Log("EventChoice_HephRecruit_TakeHammer_Optional".Localize());

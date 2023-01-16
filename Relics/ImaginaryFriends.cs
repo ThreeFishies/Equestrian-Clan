@@ -18,6 +18,7 @@ namespace Equestrian.Relic
     {
         public static readonly string ID = Ponies.GUID + "_BottledCutieMarkRelic";
         public static CardUpgradeData BottledCutieMarkUpgrade;
+        public static RelicData relicData;
 
         public static void BuildAndRegister()
         {
@@ -67,7 +68,7 @@ namespace Equestrian.Relic
                 }
             }.Build();
 
-            new CollectableRelicDataBuilder
+            relicData = new CollectableRelicDataBuilder
             {
                 CollectableRelicID = ID,
                 NameKey = "Pony_Relic_BottledCutieMark_Name_Key",
@@ -98,6 +99,8 @@ namespace Equestrian.Relic
                 },
                 UnlockLevel = 4,
             }.BuildAndRegister();
+
+            AccessTools.Field(typeof(RelicData), "relicLoreTooltipStyle").SetValue(relicData, Ponies.PonyRelicTooltip.GetEnum());
         }
     }
 }

@@ -42,17 +42,38 @@ namespace Equestrian.MonsterCards
 
                     characterAddedExpressionKeys = new List<string>() 
                     {
-                        "Pony_Unit_GuardianOfTheGates_Chatter_Added_1_Key"
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Added_1_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Added_2_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Added_3_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Added_4_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Added_5_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Added_6_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Added_7_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Added_8_Key"
                     },
 
                     characterAttackingExpressionKeys = new List<string>() 
                     {
-                        "Pony_Unit_GuardianOfTheGates_Chatter_Attacking_1_Key"
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Attacking_1_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Attacking_2_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Attacking_3_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Attacking_4_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Attacking_5_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Attacking_6_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Attacking_7_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Attacking_8_Key"
                     },
 
                     characterSlayedExpressionKeys = new List<string>() 
                     {
-                        "Pony_Unit_GuardianOfTheGates_Chatter_Slayed_1_Key"
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Slayed_1_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Slayed_2_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Slayed_3_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Slayed_4_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Slayed_5_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Slayed_6_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Slayed_7_Key",
+                        "Pony_Unit_GuardianOfTheGates_Chatter_Slayed_8_Key"
                     },
 
                     characterIdleExpressionKeys = new List<string>() 

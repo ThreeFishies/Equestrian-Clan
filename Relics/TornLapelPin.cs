@@ -15,10 +15,11 @@ namespace Equestrian.Relic
     class TornLapelPin
     {
         public static readonly string ID = Ponies.GUID + "_TornLapelPin";
+        public static RelicData relicData;
 
         public static void BuildAndRegister()
         {
-            new CollectableRelicDataBuilder
+            relicData = new CollectableRelicDataBuilder
             {
                 CollectableRelicID = ID,
                 NameKey = "Pony_Relic_TornLapelPin_Name_Key",
@@ -40,6 +41,8 @@ namespace Equestrian.Relic
                     "Pony_Relic_TornLapelPin_Lore_Key"
                 }
             }.BuildAndRegister();
+
+            AccessTools.Field(typeof(RelicData), "relicLoreTooltipStyle").SetValue(relicData, Ponies.PonyRelicTooltip.GetEnum());
         }
     }
 }

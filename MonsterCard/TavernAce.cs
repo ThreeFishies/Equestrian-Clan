@@ -41,17 +41,26 @@ namespace Equestrian.MonsterCards
 
                     characterAddedExpressionKeys = new List<string>() 
                     {
-                        "Pony_Unit_TavernAce_Chatter_Added_1_Key"
+                        "Pony_Unit_TavernAce_Chatter_Added_1_Key",
+                        "Pony_Unit_TavernAce_Chatter_Added_2_Key",
+                        "Pony_Unit_TavernAce_Chatter_Added_3_Key",
+                        "Pony_Unit_TavernAce_Chatter_Added_4_Key"
                     },
 
                     characterAttackingExpressionKeys = new List<string>() 
                     {
-                        "Pony_Unit_TavernAce_Chatter_Attacking_1_Key"
+                        "Pony_Unit_TavernAce_Chatter_Attacking_1_Key",
+                        "Pony_Unit_TavernAce_Chatter_Attacking_2_Key",
+                        "Pony_Unit_TavernAce_Chatter_Attacking_3_Key",
+                        "Pony_Unit_TavernAce_Chatter_Attacking_4_Key"
                     },
 
                     characterSlayedExpressionKeys = new List<string>() 
                     {
-                        "Pony_Unit_TavernAce_Chatter_Slayed_1_Key"
+                        "Pony_Unit_TavernAce_Chatter_Slayed_1_Key",
+                        "Pony_Unit_TavernAce_Chatter_Slayed_2_Key",
+                        "Pony_Unit_TavernAce_Chatter_Slayed_3_Key",
+                        "Pony_Unit_TavernAce_Chatter_Slayed_4_Key"
                     },
 
                     characterIdleExpressionKeys = new List<string>() 
@@ -63,7 +72,8 @@ namespace Equestrian.MonsterCards
                         "Pony_Unit_TavernAce_Chatter_Idle_5_Key",
                         "Pony_Unit_TavernAce_Chatter_Idle_6_Key",
                         "Pony_Unit_TavernAce_Chatter_Idle_7_Key",
-                        "Pony_Unit_TavernAce_Chatter_Idle_8_Key"
+                        "Pony_Unit_TavernAce_Chatter_Idle_8_Key",
+                        "Pony_Unit_TavernAce_Chatter_Idle_9_Key"
                     }
                 }.Build(),
 

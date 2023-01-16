@@ -177,6 +177,9 @@
     <None Update="ClanAssets\Loading.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="ClanAssets\loreTooltipEquestrianBg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="ClanAssets\Male.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

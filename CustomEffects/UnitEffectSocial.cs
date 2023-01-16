@@ -213,9 +213,11 @@ namespace CustomEffects
 		//StatusEffect_social_NotificationText
 		//StatusEffect_social_Stack_CardText
 
+		public static StatusEffectData statusEffectData;
+
 		public static void Make()
 		{
-			new StatusEffectDataBuilder
+			statusEffectData = new StatusEffectDataBuilder
 			{
 				StatusEffectStateName = typeof(StatusEffectSocial).AssemblyQualifiedName,
 				StatusId = "social",

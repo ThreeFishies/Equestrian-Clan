@@ -15,10 +15,11 @@ namespace Equestrian.Relic
     class MareInTheMoon
     {
         public static readonly string ID = Ponies.GUID + "_MareInTheMoonRelic";
+        public static RelicData relicData;
 
         public static void BuildAndRegister()
         {
-            new CollectableRelicDataBuilder
+            relicData = new CollectableRelicDataBuilder
             {
                 CollectableRelicID = ID,
                 //Name = "BottledCutieMark",
@@ -81,6 +82,8 @@ namespace Equestrian.Relic
                 },
                 UnlockLevel = 6,
             }.BuildAndRegister();
+
+            AccessTools.Field(typeof(RelicData), "relicLoreTooltipStyle").SetValue(relicData, Ponies.PonyRelicTooltip.GetEnum());
         }
     }
 }

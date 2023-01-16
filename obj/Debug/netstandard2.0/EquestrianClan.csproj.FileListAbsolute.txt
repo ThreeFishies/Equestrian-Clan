@@ -156,3 +156,4 @@ C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\p
 C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\Mutators\Sprite\MTR_NoRespite.png
 C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\Mutators\Sprite\MTR_WantItNeedIt.png
 C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\Mutators\Sprite\MTR_Equalizer.png
+C:\Program Files (x86)\Steam\steamapps\workshop\content\1102190\Equestrian Dev\plugins\ClanAssets\loreTooltipEquestrianBg.png

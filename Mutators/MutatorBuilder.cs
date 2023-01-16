@@ -67,6 +67,12 @@ namespace Trainworks.Builders
         public List<string> RelicLoreTooltipKeys = new List<string>() { };
 
         /// <summary>
+        /// Tooltip design style for mutators. <br></br>
+        /// Defaults to Equestrian.
+        /// </summary>
+        public RelicData.RelicLoreTooltipStyle RelicLoreTooltipStyle = Ponies.PonyRelicTooltip.GetEnum();
+
+        /// <summary>
         /// Localization key.
         /// Some relic effects cause text to appear over units when activated that describes the effect.
         /// <br></br>
@@ -127,6 +133,7 @@ namespace Trainworks.Builders
             AccessTools.Field(typeof(MutatorData), "icon").SetValue(mutatorData, icon);
             AccessTools.Field(typeof(MutatorData), "effects").SetValue(mutatorData, Effects);
             AccessTools.Field(typeof(MutatorData), "relicLoreTooltipKeys").SetValue(mutatorData, RelicLoreTooltipKeys);
+            AccessTools.Field(typeof(MutatorData), "relicLoreTooltipStyle").SetValue(mutatorData, RelicLoreTooltipStyle);
             AccessTools.Field(typeof(MutatorData), "relicActivatedKey").SetValue(mutatorData, RelicActivatedKey);
             AccessTools.Field(typeof(MutatorData), "divineVariant").SetValue(mutatorData, DivineVariant);
             AccessTools.Field(typeof(MutatorData), "boonValue").SetValue(mutatorData, BoonValue);
