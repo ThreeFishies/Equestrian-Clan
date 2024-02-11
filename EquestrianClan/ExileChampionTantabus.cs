@@ -23,25 +23,47 @@ namespace Equestrian.Champions
 			CharacterDataBuilder champion = new CharacterDataBuilder
 			{
 				CharacterID = ID,
-				Name = "Tantaabus",
+				Name = "Tantabus",
 				NameKey = "Pony_Champion_Tantabus_Name_Key",
 				Size = 2,
 				Health = 10,
 				AttackDamage = 20,
+				PriorityDraw = false,
 				CharacterChatterData = new CharacterChatterDataBuilder()
 				{
 					gender = CharacterChatterData.Gender.Neutral,
 					characterAddedExpressionKeys = new List<string> 
 					{
-						"Pony_Champion_Tantabus_Chatter_Added_1_Key"
+						"Pony_Champion_Tantabus_Chatter_Added_1_Key",
+                        "Pony_Champion_Tantabus_Chatter_Added_2_Key",
+						"Pony_Champion_Tantabus_Chatter_Added_3_Key",
+                        "Pony_Champion_Tantabus_Chatter_Added_4_Key"
 					},
 					characterAttackingExpressionKeys = new List<string> 
 					{
-						"Pony_Champion_Tantabus_Chatter_Attacking_1_Key"
-					},
+						"Pony_Champion_Tantabus_Chatter_Attacking_1_Key",
+                        "Pony_Champion_Tantabus_Chatter_Attacking_2_Key",
+						"Pony_Champion_Tantabus_Chatter_Attacking_3_Key",
+                        "Pony_Champion_Tantabus_Chatter_Attacking_4_Key",
+                        "Pony_Champion_Tantabus_Chatter_Attacking_5_Key",
+                        "Pony_Champion_Tantabus_Chatter_Attacking_6_Key",
+                        "Pony_Champion_Tantabus_Chatter_Attacking_7_Key",
+                        "Pony_Champion_Tantabus_Chatter_Attacking_8_Key"
+                    },
 					characterSlayedExpressionKeys = new List<string> 
 					{
-						"Pony_Champion_Tantabus_Chatter_Slayed_1_Key"
+						"Pony_Champion_Tantabus_Chatter_Slayed_1_Key",
+						"Pony_Champion_Tantabus_Chatter_Slayed_2_Key",
+                        "Pony_Champion_Tantabus_Chatter_Slayed_3_Key",
+                        "Pony_Champion_Tantabus_Chatter_Slayed_4_Key",
+                        "Pony_Champion_Tantabus_Chatter_Slayed_5_Key",
+                        "Pony_Champion_Tantabus_Chatter_Slayed_6_Key",
+                        "Pony_Champion_Tantabus_Chatter_Slayed_7_Key",
+                        "Pony_Champion_Tantabus_Chatter_Slayed_8_Key",
+                        "Pony_Champion_Tantabus_Chatter_Slayed_9_Key",
+                        "Pony_Champion_Tantabus_Chatter_Slayed_10_Key",
+                        "Pony_Champion_Tantabus_Chatter_Slayed_11_Key",
+                        "Pony_Champion_Tantabus_Chatter_Slayed_12_Key",
 					},
 					characterIdleExpressionKeys = new List<string> 
 					{
@@ -53,26 +75,101 @@ namespace Equestrian.Champions
 						"Pony_Champion_Tantabus_Chatter_Idle_6_Key",
 						"Pony_Champion_Tantabus_Chatter_Idle_7_Key",
 						"Pony_Champion_Tantabus_Chatter_Idle_8_Key",
-					},
-					characterTriggerExpressionKeys = new List<CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys> 
-					{ 
-						new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
-						{
-							Key = "Pony_Champion_Tantabus_Chatter_Trigger_PostCombat_1_Key",
-							Trigger = CharacterTriggerData.Trigger.PostCombat
-						},
-						new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
-						{
-							Key = "Pony_Champion_Tantabus_Chatter_Trigger_OnKill_1_Key",
-							Trigger = CharacterTriggerData.Trigger.OnKill
-						},
-						new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
-						{
-							Key = "Pony_Champion_Tantabus_Chatter_Trigger_OnTurnBegin_1_Key",
-							Trigger = CharacterTriggerData.Trigger.OnTurnBegin
-						}
-					}
-				}.Build(),
+                        "Pony_Champion_Tantabus_Chatter_Idle_9_Key",
+                        "Pony_Champion_Tantabus_Chatter_Idle_10_Key",
+                        "Pony_Champion_Tantabus_Chatter_Idle_11_Key"
+                    },
+					characterTriggerExpressionKeys = new List<CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys>
+					{
+						//PostCombat, OnKill, and Slayed happen at similar times, leading to chatter spam.
+						//Moved all messages to Slayed.
+						//new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+						//{
+						//	Key = "Pony_Champion_Tantabus_Chatter_Trigger_PostCombat_1_Key",
+						//	Trigger = CharacterTriggerData.Trigger.PostCombat
+						//},
+						//new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+						//{
+						//	Key = "Pony_Champion_Tantabus_Chatter_Trigger_PostCombat_2_Key",
+						//	Trigger = CharacterTriggerData.Trigger.PostCombat
+						//},
+						//new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+						//{
+						//	Key = "Pony_Champion_Tantabus_Chatter_Trigger_PostCombat_3_Key",
+						//	Trigger = CharacterTriggerData.Trigger.PostCombat
+						//},
+						//new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+						//{
+						//	Key = "Pony_Champion_Tantabus_Chatter_Trigger_PostCombat_4_Key",
+						//	Trigger = CharacterTriggerData.Trigger.PostCombat
+						//},
+
+						//new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+						//{
+						//	Key = "Pony_Champion_Tantabus_Chatter_Trigger_OnKill_1_Key",
+						//	Trigger = CharacterTriggerData.Trigger.OnKill
+						//},
+						//new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+						//{
+						//	Key = "Pony_Champion_Tantabus_Chatter_Trigger_OnKill_2_Key",
+						//	Trigger = CharacterTriggerData.Trigger.OnKill
+						//},
+						//new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+						//{
+						//	Key = "Pony_Champion_Tantabus_Chatter_Trigger_OnKill_3_Key",
+						//	Trigger = CharacterTriggerData.Trigger.OnKill
+						//},
+						//new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+						//{
+						//	Key = "Pony_Champion_Tantabus_Chatter_Trigger_OnKill_4_Key",
+						//	Trigger = CharacterTriggerData.Trigger.OnKill
+						//},
+
+						//Attacking and OnTurnBegin happen at similar times, leading to spam.
+						//Moved all to Attacking.
+                        //new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+						//{
+						//	Key = "Pony_Champion_Tantabus_Chatter_Trigger_OnTurnBegin_1_Key",
+						//	Trigger = CharacterTriggerData.Trigger.OnTurnBegin
+						//},
+                        //new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        //{
+                        //    Key = "Pony_Champion_Tantabus_Chatter_Trigger_OnTurnBegin_2_Key",
+                        //    Trigger = CharacterTriggerData.Trigger.OnTurnBegin
+                        //},
+                        //new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        //{
+                        //    Key = "Pony_Champion_Tantabus_Chatter_Trigger_OnTurnBegin_3_Key",
+                        //    Trigger = CharacterTriggerData.Trigger.OnTurnBegin
+                        //},
+                        //new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        //{
+                        //    Key = "Pony_Champion_Tantabus_Chatter_Trigger_OnTurnBegin_4_Key",
+                        //    Trigger = CharacterTriggerData.Trigger.OnTurnBegin
+                        //},
+
+                        new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        {
+                            Key = "Pony_Champion_Tantabus_Chatter_Trigger_CardSpellPlayed_1_Key",
+                            Trigger = CharacterTriggerData.Trigger.CardSpellPlayed
+                        },
+                        new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        {
+                            Key = "Pony_Champion_Tantabus_Chatter_Trigger_CardSpellPlayed_2_Key",
+                            Trigger = CharacterTriggerData.Trigger.CardSpellPlayed
+                        },
+                        new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        {
+                            Key = "Pony_Champion_Tantabus_Chatter_Trigger_CardSpellPlayed_3_Key",
+                            Trigger = CharacterTriggerData.Trigger.CardSpellPlayed
+                        },
+                        new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        {
+                            Key = "Pony_Champion_Tantabus_Chatter_Trigger_CardSpellPlayed_4_Key",
+                            Trigger = CharacterTriggerData.Trigger.CardSpellPlayed
+                        }
+                    }
+                }.Build(),
 
 				AssetPath = "MonsterAssets/TantabusUnit.png"
 			};
@@ -179,8 +276,11 @@ namespace Equestrian.Champions
 											{
 												"CardEffectDamage",
 												"CardEffectHeal",
-												"CardEffectHealAndDamageRelative"
-											},
+												"CardEffectHealAndDamageRelative",
+
+                                                "UnofficialBalancePatch.CardEffects.CardEffectDamageRandomWithPriority, UnofficialBalancePatch, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null",
+                                                "UnofficialBalancePatch.CardEffects.CardEffectSacrificeAndDamageRelative, UnofficialBalancePatch, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null"
+                                            },
 										}.Build(),
 									}
 								}.Build(),
@@ -280,14 +380,17 @@ namespace Equestrian.Champions
 											{
 												MyCardPools.PsychosisFilteredCards,
 											},
-											CardType = CardType.Spell,
+                                            CardType = CardType.Spell,
 											RequiredCardEffectsOperator = CardUpgradeMaskDataBuilder.CompareOperator.Or,
 											RequiredCardEffects = new List<String>
 											{
 												"CardEffectDamage",
 												"CardEffectHeal",
-												"CardEffectHealAndDamageRelative"
-											},
+												"CardEffectHealAndDamageRelative",
+
+                                                "UnofficialBalancePatch.CardEffects.CardEffectDamageRandomWithPriority, UnofficialBalancePatch, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null",
+                                                "UnofficialBalancePatch.CardEffects.CardEffectSacrificeAndDamageRelative, UnofficialBalancePatch, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null"
+                                            },
 										}.Build(),
 									}
 								}.Build(),
@@ -388,14 +491,17 @@ namespace Equestrian.Champions
 											{
 												MyCardPools.PsychosisFilteredCards,
 											},
-											CardType = CardType.Spell,
+                                            CardType = CardType.Spell,
 											RequiredCardEffectsOperator = CardUpgradeMaskDataBuilder.CompareOperator.Or,
 											RequiredCardEffects = new List<String>
 											{
 												"CardEffectDamage",
 												"CardEffectHeal",
-												"CardEffectHealAndDamageRelative"
-											},
+												"CardEffectHealAndDamageRelative",
+
+                                                "UnofficialBalancePatch.CardEffects.CardEffectDamageRandomWithPriority, UnofficialBalancePatch, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null",
+                                                "UnofficialBalancePatch.CardEffects.CardEffectSacrificeAndDamageRelative, UnofficialBalancePatch, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null"
+                                            },
 										}.Build(),
 									}
 								}.Build(),

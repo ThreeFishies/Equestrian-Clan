@@ -213,14 +213,17 @@ namespace CustomEffects
 		//StatusEffect_social_NotificationText
 		//StatusEffect_social_Stack_CardText
 
+		public static StatusEffectData statusEffectData;
+
 		public static void Make()
 		{
-			new StatusEffectDataBuilder
+			statusEffectData = new Trainworks.BuildersV2.StatusEffectDataBuilder
 			{
-				StatusEffectStateName = typeof(StatusEffectSocial).AssemblyQualifiedName,
-				StatusId = "social",
+				StatusEffectStateType = typeof(StatusEffectSocial),
+				StatusID = "social",
 				DisplayCategory = StatusEffectData.DisplayCategory.Persistent,
 				IconPath = "ClanAssets/social.png",
+				TooltipIconPath = "ClanAssets/StatusSmall/social.png",
 				ShowStackCount = false,
 				IsStackable = false,
 				TriggerStage = StatusEffectData.TriggerStage.None

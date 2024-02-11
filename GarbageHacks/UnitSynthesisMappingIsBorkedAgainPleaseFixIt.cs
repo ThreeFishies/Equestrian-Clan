@@ -1,3 +1,4 @@
+/*
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -45,7 +46,7 @@ namespace Equestrian.HarmonyPatches
                 }
             }
 
-            /*
+            *//*
             if (!Ponies.UnitSynthesisMappingIsBorkedAgain) 
             { 
                 if (characterData.GetSubtypes().Count > 0) 
@@ -74,7 +75,7 @@ namespace Equestrian.HarmonyPatches
                         }
                     }
                 }
-            }*/
+            }*//*
 
             //if (!Ponies.UnitSynthesisMappingIsBorkedAgain) { return; }
 
@@ -190,3 +191,4 @@ namespace Equestrian.HarmonyPatches
         }
     }
 }
+*/

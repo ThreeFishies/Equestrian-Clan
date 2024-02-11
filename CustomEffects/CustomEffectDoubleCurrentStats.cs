@@ -50,9 +50,9 @@ namespace CustomEffects
 				upgradeState = null;
 				//target = null;
 			}
-			List<CharacterState>.Enumerator enumerator = default(List<CharacterState>.Enumerator);
+			//List<CharacterState>.Enumerator enumerator = default(List<CharacterState>.Enumerator);
 			yield break;
-			yield break;
+			//yield break;
 		}
 	}
 }

@@ -13,6 +13,7 @@ using Equestrian.Init;
 using Equestrian.MonsterCards;
 using ShinyShoe.Loading;
 using Equestrian.Relic;
+using Trainworks.Enums;
 
 namespace CustomEffects
 {
@@ -88,7 +89,7 @@ namespace CustomEffects
 
             if (numFriendlyUnits < (base.GetParamInt() - RelicReduction) || numFriendlyUnits == 0)
             {
-                selectionError = CardSelectionBehaviour.SelectionError.Unplayable;
+                selectionError = Ponies.PonyHerdSelectionError.GetEnum();
                 return false;
             }
 
@@ -107,6 +108,41 @@ namespace CustomEffects
         public override IEnumerator ApplyEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams)
         {
             yield break;
+        }
+    }
+
+    public class PonyHerdSelectionError : ExtendedEnum<PonyHerdSelectionError, CardSelectionBehaviour.SelectionError>
+    {
+        // Token: 0x06000106 RID: 262 RVA: 0x00005CDC File Offset: 0x00003EDC
+        public PonyHerdSelectionError(string localizationKey, int? ID = null) : base(localizationKey, ID ?? PonyHerdSelectionError.GetNewTooltipTypeGUID())
+        {
+        }
+
+        // Token: 0x06000107 RID: 263 RVA: 0x00005D20 File Offset: 0x00003F20
+        public static int GetNewTooltipTypeGUID()
+        {
+            PonyHerdSelectionError.NumTypes++;
+            return PonyHerdSelectionError.NumTypes;
+        }
+
+        // Token: 0x06000108 RID: 264 RVA: 0x00005D44 File Offset: 0x00003F44
+        public static implicit operator PonyHerdSelectionError(CardSelectionBehaviour.SelectionError herdSelectionError)
+        {
+            return ExtendedEnum<PonyHerdSelectionError, CardSelectionBehaviour.SelectionError>.Convert(herdSelectionError);
+        }
+
+        //A number bigger than the types currently available.
+        public static int NumTypes = 14;
+
+        public static void Initialize() 
+        {
+            CardSelectionBehaviour selectionBehaviour = new CardSelectionBehaviour();
+
+            Dictionary<CardSelectionBehaviour.SelectionError, string> errors = AccessTools.Field(typeof(CardSelectionBehaviour), "SelectionErrorToMessageKey").GetValue(selectionBehaviour) as Dictionary<CardSelectionBehaviour.SelectionError, string>;
+
+            errors.Add(Ponies.PonyHerdSelectionError.GetEnum(), "CardTraitHerd_SelectionError");
+
+            AccessTools.Field(typeof(CardSelectionBehaviour), "SelectionErrorToMessageKey").SetValue(selectionBehaviour, errors);
         }
     }
 }

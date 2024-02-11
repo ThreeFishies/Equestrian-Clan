@@ -26,9 +26,9 @@ namespace Equestrian
 				Name = "Equestrian",
 				TitleLoc = "Equestrian_Clan_Name",
 				Description = "Small, cute and friendly, the Equestrians are unlikely champions of Hell. But when Tarturus froze over, they realized the errors of Heaven's ways, and will fight to restore balance to the world.",
-				DescriptionLoc = "Clan_desc",
+				DescriptionLoc = "Equestrian_Clan_desc",
 				SubclassDescription = "Ally yourself with the tiny and timid Equestrians.",
-				SubclassDescriptionLoc = "Clan_subdesc",
+				SubclassDescriptionLoc = "Equestrian_Clan_subdesc",
 				IconAssetPaths = new List<string>
 				{
 					"ClanAssets/EquestrianLogo_32.png",
@@ -50,6 +50,7 @@ namespace Equestrian
 		public static readonly string BannerID = EquestrianClan.ID + "_Banner";
 		public static readonly string RewardID = EquestrianClan.ID + "_BannerReward";
 		public static CardPool draftPool = UnityEngine.ScriptableObject.CreateInstance<CardPool>();
+		public static RewardNodeData data;
 
 		public static void buildbanner()
 		{
@@ -66,7 +67,7 @@ namespace Equestrian
 
 			Ponies.Log("Banner Card Pool");
 
-			new RewardNodeDataBuilder
+			data = new RewardNodeDataBuilder
 			{
 				RewardNodeID = BannerID,
 				MapNodePoolIDs = new List<string>
