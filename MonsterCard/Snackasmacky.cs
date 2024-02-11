@@ -36,6 +36,15 @@ namespace Equestrian.MonsterCards
                 PriorityDraw = true,
                 AssetPath = "MonsterAssets/SnackasmackyUnit.png",
                 SubtypeKeys = new List<string> { SubtypePony.Key },
+                StartingStatusEffects = new StatusEffectStackData[] 
+                {
+                    new StatusEffectStackData
+                    {
+                        statusId = VanillaStatusEffectIDs.Regen,
+                        count = 2,
+                    }
+                },
+
                 CharacterChatterData = new CharacterChatterDataBuilder()
                 {
                     name = "Snackasmacky chatter data",
@@ -45,16 +54,25 @@ namespace Equestrian.MonsterCards
                     characterAddedExpressionKeys = new List<string>() 
                     {
                         "Pony_Unit_Snackasmacky_Chatter_Added_1_Key",
+                        "Pony_Unit_Snackasmacky_Chatter_Added_2_Key",
+                        "Pony_Unit_Snackasmacky_Chatter_Added_3_Key",
+                        "Pony_Unit_Snackasmacky_Chatter_Added_4_Key"
                     },
 
                     characterAttackingExpressionKeys = new List<string>() 
                     {
                         "Pony_Unit_Snackasmacky_Chatter_Attacking_1_Key",
+                        "Pony_Unit_Snackasmacky_Chatter_Attacking_2_Key",
+                        "Pony_Unit_Snackasmacky_Chatter_Attacking_3_Key",
+                        "Pony_Unit_Snackasmacky_Chatter_Attacking_4_Key"
                     },
 
                     characterSlayedExpressionKeys = new List<string>() 
                     {
                         "Pony_Unit_Snackasmacky_Chatter_Slayed_1_Key",
+                        "Pony_Unit_Snackasmacky_Chatter_Slayed_2_Key",
+                        "Pony_Unit_Snackasmacky_Chatter_Slayed_3_Key",
+                        "Pony_Unit_Snackasmacky_Chatter_Slayed_4_Key"
                     },
 
                     characterIdleExpressionKeys = new List<string>() 
@@ -67,6 +85,7 @@ namespace Equestrian.MonsterCards
                         "Pony_Unit_Snackasmacky_Chatter_Idle_6_Key",
                         "Pony_Unit_Snackasmacky_Chatter_Idle_7_Key",
                         "Pony_Unit_Snackasmacky_Chatter_Idle_8_Key",
+                        "Pony_Unit_Snackasmacky_Chatter_Idle_9_Key",
                     },
 
                     characterTriggerExpressionKeys = new List<CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys>() 
@@ -75,8 +94,23 @@ namespace Equestrian.MonsterCards
                         {
                             Key = "Pony_Unit_Snackasmacky_Chatter_Trigger_OnHeal_1_Key",
                             Trigger = CharacterTriggerData.Trigger.OnHeal
+                        },
+                        new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        {
+                            Key = "Pony_Unit_Snackasmacky_Chatter_Trigger_OnHeal_2_Key",
+                            Trigger = CharacterTriggerData.Trigger.OnHeal
+                        },
+                        new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        {
+                            Key = "Pony_Unit_Snackasmacky_Chatter_Trigger_OnHeal_3_Key",
+                            Trigger = CharacterTriggerData.Trigger.OnHeal
+                        },
+                        new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        {
+                            Key = "Pony_Unit_Snackasmacky_Chatter_Trigger_OnHeal_4_Key",
+                            Trigger = CharacterTriggerData.Trigger.OnHeal
                         }
-                    }
+                    }                    
                 }.Build(),
 
                 TriggerBuilders = new List<CharacterTriggerDataBuilder>
@@ -118,7 +152,7 @@ namespace Equestrian.MonsterCards
                 Targetless = false,
                 AssetPath = "MonsterAssets/SnackasmackyCard.png",
                 ClanID = EquestrianClan.ID,
-                CardPoolIDs = new List<string> { VanillaCardPoolIDs.UnitsAllBanner },
+                CardPoolIDs = new List<string> { VanillaCardPoolIDs.UnitsAllBanner },  //Will also be added to Conscription Notice pool.
                 //CardPoolIDs = new List<string> { },
                 CardLoreTooltipKeys = new List<string> 
                 {

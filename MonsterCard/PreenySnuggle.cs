@@ -43,14 +43,23 @@ namespace Equestrian.MonsterCards
                     characterAddedExpressionKeys = new List<string>() 
                     {
                         "Pony_Unit_PreenySnuggle_Chatter_Added_1_Key",
+                        "Pony_Unit_PreenySnuggle_Chatter_Added_2_Key",
+                        "Pony_Unit_PreenySnuggle_Chatter_Added_3_Key",
+                        "Pony_Unit_PreenySnuggle_Chatter_Added_4_Key"
                     },
                     characterAttackingExpressionKeys = new List<string>() 
                     {
                         "Pony_Unit_PreenySnuggle_Chatter_Attacking_1_Key",
+                        "Pony_Unit_PreenySnuggle_Chatter_Attacking_2_Key",
+                        "Pony_Unit_PreenySnuggle_Chatter_Attacking_3_Key",
+                        "Pony_Unit_PreenySnuggle_Chatter_Attacking_4_Key"
                     },
                     characterSlayedExpressionKeys = new List<string>() 
                     {
                         "Pony_Unit_PreenySnuggle_Chatter_Slayed_1_Key",
+                        "Pony_Unit_PreenySnuggle_Chatter_Slayed_2_Key",
+                        "Pony_Unit_PreenySnuggle_Chatter_Slayed_3_Key",
+                        "Pony_Unit_PreenySnuggle_Chatter_Slayed_4_Key"
                     },
                     characterIdleExpressionKeys = new List<string>() 
                     {
@@ -62,6 +71,7 @@ namespace Equestrian.MonsterCards
                         "Pony_Unit_PreenySnuggle_Chatter_Idle_6_Key",
                         "Pony_Unit_PreenySnuggle_Chatter_Idle_7_Key",
                         "Pony_Unit_PreenySnuggle_Chatter_Idle_8_Key",
+                        "Pony_Unit_PreenySnuggle_Chatter_Idle_9_Key"
                     }
                 }.Build(),
 
@@ -79,7 +89,7 @@ namespace Equestrian.MonsterCards
                     new CharacterTriggerDataBuilder
                     {
                         trigger = CharacterTriggerData.Trigger.OnUnscaledSpawn,
-                        HideTriggerTooltip = false,
+                        HideTriggerTooltip = true,
                         DescriptionKey = "Pony_Unit_PreenySnuggle_Description_Key",
                         
                         EffectBuilders = new List<CardEffectDataBuilder>
@@ -182,8 +192,8 @@ namespace Equestrian.MonsterCards
                 UpgradeTitle = "PreenySnuggleEssence",
                 SourceSynthesisUnit = PreenySnuggleCharacterData,
                 UpgradeDescriptionKey = "Pony_Unit_PreenySnuggle_Essence_Key",
-                BonusHP = 16,
-                BonusDamage = 16,
+                BonusHP = 8,
+                BonusDamage = 8,
                 CostReduction = -1,
                 //XCostReduction = -1,
 
@@ -191,7 +201,7 @@ namespace Equestrian.MonsterCards
                 {
                     new CharacterTriggerDataBuilder
                     {
-                        trigger = CharacterTriggerData.Trigger.OnUnscaledSpawn,
+                        Trigger = CharacterTriggerData.Trigger.OnUnscaledSpawn,
                         HideTriggerTooltip = true,
 
                         EffectBuilders = new List<CardEffectDataBuilder>
@@ -202,6 +212,27 @@ namespace Equestrian.MonsterCards
                                 HideTooltip = true,
                                 TargetMode = TargetMode.Self,
                             },
+                        }
+                    },
+                    new CharacterTriggerDataBuilder
+                    {
+                        Trigger = CharacterTriggerData.Trigger.OnSpawn,
+
+                        EffectBuilders = new List<CardEffectDataBuilder>
+                        {
+                            new CardEffectDataBuilder
+                            {
+                                EffectStateName = "CardEffectAddTempCardUpgradeToUnits",
+                                TargetMode = TargetMode.Self,
+                                TargetTeamType = Team.Type.Monsters,
+                                ParamCardUpgradeData = new CardUpgradeDataBuilder
+                                {
+                                    UpgradeTitle = "PrennySnuggles_Essence_Summon_trigger",
+                                    BonusDamage = 8,
+                                    BonusHP = 8,
+                                    SourceSynthesisUnit = ScriptableObject.CreateInstance<CharacterData>(),
+                                }.Build(),
+                            }
                         }
                     }
                 },

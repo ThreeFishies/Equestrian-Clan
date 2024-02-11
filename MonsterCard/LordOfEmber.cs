@@ -51,7 +51,8 @@ namespace Equestrian.MonsterCards
 
                     characterSlayedExpressionKeys = new List<string>()
                     {
-                        "Pony_Unit_LordOfEmber_Chatter_Slayed_1_Key"
+                        "Pony_Unit_LordOfEmber_Chatter_Slayed_1_Key",
+                        "Pony_Unit_LordOfEmber_Chatter_Slayed_2_Key"
                     },
 
                     characterIdleExpressionKeys = new List<string>()
@@ -64,11 +65,13 @@ namespace Equestrian.MonsterCards
                     
                     characterTriggerExpressionKeys = new List<CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys>() 
                     {
-                        new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
-                        {
-                            Key = "Pony_Unit_LordOfEmber_Chatter_Trigger_OnKill_1_Key",
-                            Trigger = CharacterTriggerData.Trigger.OnKill
-                        }
+                        //OnKill and Slayed trigger at the same time.
+                        //Moving to Slayed to reduce chatter spam.
+                        //new CharacterChatterDataBuilder.CharacterTriggerDataChatterExpressionKeys()
+                        //{
+                        //    Key = "Pony_Unit_LordOfEmber_Chatter_Trigger_OnKill_1_Key",
+                        //    Trigger = CharacterTriggerData.Trigger.OnKill
+                        //}
                     }
                 }.Build(),
                 
@@ -99,7 +102,7 @@ namespace Equestrian.MonsterCards
                 }
             }.BuildAndRegister();
 
-            CardData TrashPandaCardData = new CardDataBuilder
+            CardData LordOfEmberCardData = new CardDataBuilder
             {
                 CardID = ID,
                 NameKey = "Pony_Unit_LordOfEmber_Name_Key",
@@ -137,32 +140,74 @@ namespace Equestrian.MonsterCards
                 UpgradeTitle = "LordOfEmberEssence",
                 SourceSynthesisUnit = LordOfEmberCharacterData,
                 UpgradeDescriptionKey = "Pony_Unit_LordOfEmber_Essence_Key",
-                BonusHP = 15,
-                BonusDamage = 25,
-                CostReduction = -2,
-                BonusSize = 2,
-
-                StatusEffectUpgrades = new List<StatusEffectStackData> 
-                { 
-                    new StatusEffectStackData
-                    {
-                        statusId = VanillaStatusEffectIDs.Sweep,
-                        count = 1
-                    }
-                },
+                BonusHP = 0,
+                BonusDamage = 10,
+                CostReduction = 0,
+                BonusSize = 0,
 
                 TriggerUpgradeBuilders = new List<CharacterTriggerDataBuilder> 
                 { 
                     new CharacterTriggerDataBuilder
                     { 
-                        Trigger = CharacterTriggerData.Trigger.OnKill,
+                        Trigger = CharacterTriggerData.Trigger.OnUnscaledSpawn,
                         DescriptionKey = "Pony_Unit_LordOfEmber_Description_Key",
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
                             new CardEffectDataBuilder
                             {
-                                EffectStateName = "CardEffectGainEnergy",
-                                ParamInt = 1,
+                                EffectStateName = typeof(CustomCardEffectAddStatusImmunity).AssemblyQualifiedName,
+                                TargetMode = TargetMode.Self,
+                                TargetTeamType = Team.Type.Monsters,
+                                ParamStatusEffects = new StatusEffectStackData[]
+                                {
+                                    new StatusEffectStackData
+                                    {
+                                        statusId = VanillaStatusEffectIDs.Sap,
+                                        count = 1
+                                    }
+                                }
+                            },
+                            new CardEffectDataBuilder
+                            {
+                                EffectStateName = typeof(CustomCardEffectAddStatusImmunity).AssemblyQualifiedName,
+                                TargetMode = TargetMode.Self,
+                                TargetTeamType = Team.Type.Monsters,
+                                ParamStatusEffects = new StatusEffectStackData[]
+                                {
+                                    new StatusEffectStackData
+                                    {
+                                        statusId = VanillaStatusEffectIDs.Emberdrain,
+                                        count = 1
+                                    }
+                                }
+                            },
+                            new CardEffectDataBuilder
+                            {
+                                EffectStateName = "CardEffectRemoveStatusEffect",
+                                TargetMode = TargetMode.Self,
+                                TargetTeamType = Team.Type.Monsters,
+                                ParamStatusEffects = new StatusEffectStackData[]
+                                {
+                                    new StatusEffectStackData
+                                    {
+                                        statusId = VanillaStatusEffectIDs.Emberdrain,
+                                        count = 0
+                                    }
+                                }
+                            },
+                            new CardEffectDataBuilder
+                            {
+                                EffectStateName = "CardEffectRemoveStatusEffect",
+                                TargetMode = TargetMode.Self,
+                                TargetTeamType = Team.Type.Monsters,
+                                ParamStatusEffects = new StatusEffectStackData[]
+                                {
+                                    new StatusEffectStackData
+                                    {
+                                        statusId = VanillaStatusEffectIDs.Sap,
+                                        count = 0
+                                    }
+                                }
                             }
                         }
                     }

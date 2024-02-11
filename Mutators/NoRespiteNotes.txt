@@ -1,0 +1,58 @@
+Ring 1:
+16296 - 4/1 - AttackerT1 - "5c46e946-e798-4b5a-8b91-10d9a5822234"
+16413 - 0/5(25) - ShieldGuard1 - "818e0817-a691-4248-bdbf-98d32982ad9b"
+16379 - 2/25 - HeavtT1Basic - "2e371b96-1f84-44e6-9ce5-a301c9b84763"
+16367 - +5/1 - ClericT1 - "5709fe14-007a-4900-84b3-c8d4d9f5f948"
+16381 - 3/20 - HeavyT1ChainedBrute - "bb48fc25-87a1-41cb-b951-e052dcb60d7e"
+16401 - 1/1 - HordeT1 - "d441a440-931c-48db-9633-bb761f503042"
+
+Ring2:
+16371 - 1/1 - "febefdcb-ce46-4884-a2f0-3485494bc901" //EnchanterT1Speed
+16401 - 1/1 - "d441a440-931c-48db-9633-bb761f503042" //HordeT1
+16296 - 4/1 - "5c46e946-e798-4b5a-8b91-10d9a5822234" //AttackerT1
+16367 - +5/1 - "5709fe14-007a-4900-84b3-c8d4d9f5f948" //ClericT1
+16383 - 2/25 - "feb71302-93eb-4d65-bfd5-c4afc072dd55" //HeavyT1GainAttackOnSpellcast
+16407 - 1/2 - "85e6b58c-8bab-4390-9319-14291bc71f9c" //MageT1Junker
+16379 - 2/25 - "2e371b96-1f84-44e6-9ce5-a301c9b84763" //HeavtT1Basic
+16413 - 0/5(25) - "818e0817-a691-4248-bdbf-98d32982ad9b" //ShieldGuard1
+16373 - 1/1 - "ba72de22-8c0e-478f-a6df-524929742977" //EnchanterT1Spikes
+
+Ring 3: skip (flying boss)
+
+Ring 4:
+16298 - 6/2 - "f277aff2-eb7e-417a-9b27-ff3bd98975f3" //AttackerT2
+16367 - +5/1 - "5709fe14-007a-4900-84b3-c8d4d9f5f948" //ClericT1
+16369 - +10/2 - "d0f90c99-28b7-4700-9192-6d34efa5fe39" //ClericT2
+16375 - 1/1 - "530b1e0c-d405-49b5-a394-96bd39e04cb5" //EnchanterT2Speed
+16385 - 5/75 - "fd1ed53c-a112-44f7-86df-aa0887b43acf" //HeavyT2Basic
+16389 - 2/35 - "44d76f20-d74c-42a6-83f6-253069a007ef" //HeavyT2GrowOnAscend
+16393 - 4/60 - "630f33d3-51cb-4cc1-8bc7-caabfbf80193" //HeavyT2SelfRepair (incant armor)
+16409 - 1/5 - "2e440ab7-7786-422c-ba18-4c987ba1fd55" //MageT2Junker
+16415 - 0/10(50) - "9a79de7c-8005-4921-9f43-7f6da00fb380" //ShieldGuardT2
+
+Ring 5:
+16298 - 6/2 - "f277aff2-eb7e-417a-9b27-ff3bd98975f3" //AttackerT2
+16299 - 7/2 - "2255cfcc-e245-4619-b23c-9172fdfca965" //AttackerT2Stealth
+16369 - +10/2 - "d0f90c99-28b7-4700-9192-6d34efa5fe39" //ClericT2
+16385 - 5/75 - "fd1ed53c-a112-44f7-86df-aa0887b43acf" //HeavyT2Basic
+16387 - 5/65 - "f7b7fc11-a063-4393-a39a-3124f0a5ea98" //HeavyT2DeathHarvester
+16391 - 3/65 - "abc1302d-81b5-4e08-8c33-7d9e4821f783" //HeavyT2GrowOnKill (sweeper)
+16403 - 2/1 - "6143e635-1e9b-43b7-a48b-40f35c11af0d" //HordeT2DeathGivesAttack
+16415 - 0/10(50) - "9a79de7c-8005-4921-9f43-7f6da00fb380" //ShieldGuardT2
+
+Ring 6 (skip - flying)
+
+Ring 7:
+16302 - 10/3 - "fdf6db4f-2e1a-4718-b36e-3d250cfac630" //AttackerT3
+16303 - 10/5 - "18eb55da-80bd-4a61-b95e-b816d3dd4ba8" //AttackerT3Reaper
+16377 - 1/6 - "b58aa8c2-8ca8-4682-a25a-239e451733ca" //EnchanterT3Multistrike
+16395 - 8/130 - "808d529c-87c4-40f2-9b1b-c0e4176e5ad6" //HeavyT3Basic
+16397 - 10/110 - "adfc88b5-9b20-44a1-9fdc-53725aa7b20d" //HeavyT3DeathHarvester
+16399 - 2/90 - "d45133e4-1049-4713-9780-2e124af68356" //HeavyT3EmberDrain
+16405 - 5/3 - "44d7eb10-9ea2-46b2-a513-0cba9cd16890" //HordeT3DeathDoesDamage
+16411 - 3/10 - "a0e49b3c-747a-4b08-8583-7ac7d73e791b" //MageT3Junker
+16417 - 0/15(100) - "76b7a42c-837d-40b4-9408-87abcd079fb4" //ShieldGuardT3
+
+Ring 8 (skip - Seraph)
+
+Ring 9 (skip - Divinity)
