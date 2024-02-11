@@ -85,7 +85,7 @@ namespace Equestrian.Arcadian
         {
             SaveManager saveManager = ProviderManager.SaveManager;
 
-            if (!saveManager.IsInBattle() || !ArcadianExists) 
+            if (!ArcadianExists) 
             {
                 return false;
             }
@@ -137,7 +137,7 @@ namespace Equestrian.Arcadian
             }
             else
             {
-                Ponies.Log("Attempting to init a run without a main class. Aborting.");
+                //Ponies.Log("Attempting to init a run without a main class. Aborting.");
                 return false;
             }
 
