@@ -1,8 +1,7 @@
-﻿/*
-using HarmonyLib;
+﻿using HarmonyLib;
 using System;
 using Trainworks.Managers;
-using MonsterTrainModding;
+using Equestrian.Init;
 
 //So apparently all of this stuff is needed to fix unit merging at Divine Temples. Call FindUnitSynthesisMappingInstanceToStub() in your initialization setup after builing and registering your units to allow thier CardUpgradeDataBuilder data to be added to the game. Oh, and make sure your BepInEx logging is set up properly too, or this fix won't work.
 namespace SynthesisFix
@@ -43,5 +42,3 @@ namespace SynthesisFix
 		}
 	}
 }
-
-*/

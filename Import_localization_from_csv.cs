@@ -1,3 +1,4 @@
+/*
 using System;
 using HarmonyLib;
 using I2.Loc;
@@ -17,3 +18,4 @@ namespace PonyLocalization
 		}
 	}
 }
+*/

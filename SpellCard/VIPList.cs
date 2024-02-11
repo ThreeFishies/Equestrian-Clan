@@ -30,7 +30,7 @@ namespace Equestrian.SpellCards
                 ClanID = EquestrianClan.ID,
                 AssetPath = "SpellAssets/VIPList.png",
                 CardPoolIDs = new List<string> { VanillaCardPoolIDs.MegaPool },
-                CardLoreTooltipKeys = new List<string> 
+                CardLoreTooltipKeys = new List<string>
                 {
                     "Pony_Spell_VIPList_Lore_Key"
                 },
@@ -57,7 +57,7 @@ namespace Equestrian.SpellCards
                         TargetCardType = CardType.Monster,
                         TargetMode = TargetMode.Hand,
                         ParamCardUpgradeData = new CardUpgradeDataBuilder
-                        { 
+                        {
                             BonusDamage = 10,
                             BonusHP = 10,
                             //UpgradeDescription = "VIPList_desc",
@@ -76,6 +76,7 @@ namespace Equestrian.SpellCards
                                 {
                                     Trigger = CharacterTriggerData.Trigger.OnUnscaledSpawn,
                                     HideTriggerTooltip = true,
+                                    DisplayEffectHintText = false,
                                     //DescriptionKey = "CardEffectSocial_Description",
 
                                     EffectBuilders = new List<CardEffectDataBuilder>

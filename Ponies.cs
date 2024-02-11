@@ -27,6 +27,12 @@ using Equestrian.Sprites;
 using CustomEffects;
 using Equestrian.Arcadian;
 using Equestrian.PonyStory;
+using Equestrian.Mutators;
+using Equestrian.Metagame;
+using GivePony;
+using static UnityEngine.TouchScreenKeyboard;
+using TMPro;
+using Equestrian.Chatter;
 
 namespace Equestrian.Init
 {
@@ -41,22 +47,44 @@ namespace Equestrian.Init
     public class Ponies : BaseUnityPlugin, IInitializable
     {
         public static Ponies Instance { get; private set; }
-
+        
         public const string GUID = "mod.equestrian.clan.monstertrain";
         public const string NAME = "Equestrian Clan";
-        public const string VERSION = "0.9.7.0";
+        public const string VERSION = "1.2.3";
         public static ClassData EquestrianClanData;
         public static CardPool BGPonyPool;
         public static EnhancerData FriendstoneData = ScriptableObject.CreateInstance<EnhancerData>();
         //public static bool UnitSynthesisMappingIsBorkedAgain = false;
-        public static bool HallowedHallsInEffect = false;
+        public static bool HallowedHallsInEffect = false; //Flag needed by the social mechanic to work around a Hallowed Halls bug.
         //public static SpawnPoint LastMovedUnit = null;
         //public static bool PanicFlag = false;
-        public static bool EquestrianClanIsInit = false;
+        public static bool EquestrianClanIsInit = false; //Very important! If a patched method is invoked by another mod before the Equestrian Clan is loaded, this can cause crashes. Always check to ensure data is loaded before referencing any pony-specific data.
         public static bool AttemptAResetFirst = true;
+        public static PonyFrame PonyFrame; //This is for the clan's card mastery frame
+        public static PonyLoreTooltipType PonyLoreTooltip; //This will allow us to configure a custom tooltip background for pony lore tooltips.
+        public static PonyRelicTooltipType PonyRelicTooltip; //Also for relics
+        public static PonyHerdSelectionError PonyHerdSelectionError; //Show a custom error message for unplayable Herd Spells
+        //public static GivePonyToggle givePonyToggle;
 
+        //In order to make a loading screen work, the clan's loading process was moved from the default Trainworks location of AssetLoadingManager.Start().
         public void Initialize()
         {
+            //Init the clan data here so the custom clan helper can find it.
+
+            //Clan
+            EquestrianClanData = EquestrianClan.Buildclan();
+            Ponies.Log("Build Clan");
+
+            CustomLocalizationManager.ImportCSV("Localization/PoniesEverywhere.csv", ',');
+        }
+
+        //To LoadingScreen.FadeOutFullScreen(). Note that the background image needs to be prepped earlier, at LoadingScreen.Initialize() or it won't show up.
+        public void InitializeHereInstead() 
+        {
+            //Oh, and change the cursor too, because we can.
+            PonyLoader.ChangeCursor();
+            Ponies.Log("TempPonyCursor");
+
             //Character Subtypes
             SubtypeHerb.BuildAndRegister();
             Ponies.Log("RegisterHerbSubtype");
@@ -66,14 +94,40 @@ namespace Equestrian.Init
             Ponies.Log("RegisterPetSubtype");
             SubtypeDragon.BuildAndRegister();
             Ponies.Log("RegisterDragonSubtype");
-
-            //Clan
-            EquestrianClanData = EquestrianClan.Buildclan();
-            Ponies.Log("Build Clan");
+            SubtypeTrap.BuildAndRegister();
+            Ponies.Log("RegisterTrapSubtype");
 
             //Status Effects
             StatusEffectSocial.Make();
             Ponies.Log("StatusEffectSocial");
+            StatusEffectMale.Make();
+            Ponies.Log("Male");
+            StatusEffectFemale.Make();
+            Ponies.Log("Female");
+            StatusEffectGenderless.Make();
+            Ponies.Log("Genderless");
+            StatusEffectUndefined.Make();
+            Ponies.Log("Undefined");
+
+            //Extending the enum for tooltip types to include a pony lore tooltip.
+            PonyLoreTooltip = new PonyLoreTooltipType("loreTooltipPony");
+            Ponies.Log("Pony Lore Tooltip");
+
+            //Load assets and configure the lore tooltip design.
+            PonyLoreTooltipType.Initialize();
+            Ponies.Log("Initializing the pony lore tooltip design.");
+
+            //Relics also have an enum type that needs to be extended. Also works for Mutators.
+            PonyRelicTooltip = new PonyRelicTooltipType("relicTooltipPony");
+            Ponies.Log("Pony Relic Tooltip");
+
+            //Extends the enum for unplayable spell error messages.
+            PonyHerdSelectionError = new PonyHerdSelectionError("ponyHerdSelectionError");
+            Ponies.Log("Card Trait Herd Selection Error");
+
+            //Add the cutom error message to the dictionary.
+            PonyHerdSelectionError.Initialize();
+            Ponies.Log("Registering the card trait Herd error message.");
 
             //Starter Spell (exile)
             NightTerrors.BuildAndRegister();
@@ -128,8 +182,10 @@ namespace Equestrian.Init
             Ponies.Log("Spa Treatment");
             SpontaneousSongAndDance.BuildAndRegister();
             Ponies.Log("Spontaneous Song and Dance");
+            //One of the game's tooltip keys for X-scaling healing was left undefined.
             //Ponies.Log("CardTraitScalingAddDamage_ExtraDamage_XCostOutsideBattle_CardText".Localize(null));
             //Ponies.Log("CardTraitScalingAddDamage_ExtraHealing_XCostOutsideBattle_CardText".Localize(null));
+            //fix: <nobr><i>(<{1}>*+{0}*</{1}> healing)</i></nobr>
             Interrogation.BuildAndRegister();
             Ponies.Log("Interrogation");
             //Uncommon spell "Fan Club" initializes after card pool initialization
@@ -183,6 +239,7 @@ namespace Equestrian.Init
             //Ponies.Log("RoomModifiersData[0].DescriptionKey: " + CustomCharacterManager.GetCharacterDataByID(HeartsDesire.CharID).GetRoomModifiersData()[0].GetDescriptionKey());
 
             //A hidden unit that provides a default essence to prevent crashes.
+            //Check MissingMare.cs under the MonsterCard folder for tips on how to find her.
             MissingMare.BuildAndRegister();
             Ponies.Log("Missing Mare");
 
@@ -199,6 +256,8 @@ namespace Equestrian.Init
             Ponies.Log("Tom");
 
             //Enhancers
+            //This generates errors because Trainworks uses new EnhancerData(); instead of ScriptableObject.CreateInstance<EnhancerData>();
+            //It still works, though.
             Ponies.FriendstoneData = Friendstone.BuildAndRegister();
             Ponies.Log("Friendstone");
             Playstone.BuildAndRegister();
@@ -235,8 +294,9 @@ namespace Equestrian.Init
             Ponies.Log("The Seventh Element");
 
             //Register unit synthesis data (DLC essences)
-            //LiLyPatch.FindUnitSynthesisMappingInstanceToStub();
-            //Ponies.Log("Lily Patch");
+            AccessTools.Field(typeof(UnitSynthesisMapping), "_dictionaryMapping").SetValue(ProviderManager.SaveManager.GetBalanceData().SynthesisMapping, null);
+            SynthesisFix.LiLyPatch.FindUnitSynthesisMappingInstanceToStub();
+            Ponies.Log("Lily Patch");
             //Trainworks.Patches.AccessUnitSynthesisMapping.FindUnitSynthesisMappingInstanceToStub();
             //Ponies.Log("Trainworks Unit Synthesis Patch");
             //if (ProviderManager.SaveManager.GetBalanceData().SynthesisMapping.GetUpgradeData(CustomCardManager.GetCardDataByID(BackgroundPony.ID).GetSpawnCharacterData()) == null) 
@@ -258,27 +318,153 @@ namespace Equestrian.Init
             EquestrianBanner.buildbanner();
             Ponies.Log("Banner");
 
+            //Fix a bug with the revenge version of Heaven's aid so it won't trigger Preeny Snuggles' on played effect when triggered.
             FixHeavensAid.MakeItSo();
             Ponies.Log("Fix Heaven's Aid");
+
+            //Change Heph's gender from Male to Female.
+            HephIsAFineAndDandyLADYThankYouVeryMuch.Fix();
+            Ponies.Log("Stop Misgendering Heph");
+
+            //Update Conscription Notice
+            ConscriptionOfPonies.ConscriptThemPonies();
+            Ponies.Log("Updated Conscription Notice.");
 
             //Add equestrian variants for the starter spell 'Analog'
             ArcadianCompatibility.Initialize();
             Ponies.Log("Arcadian Stuff Complete.");
 
+            //The story file controls the text and defines the clickable buttons and logic of cavern events.
             FlowerPonies.EditMasterStoryFile();
-            Ponies.Log("Added \"FlowerPonies\" cavern event data.");
+            Ponies.Log("Added \"FlowerPonies\" cavern event script to the master story file.");
 
+            //The event data determines any requirements and links the clickable buttons to their effects/rewards.
             FlowerPonies.BuildEventData();
-            Ponies.Log("Build and register event data.");
+            Ponies.Log("Build and register \"FlowerPonies\" event data.");
+
+            //Mutators
+            CallTheCavalryMutator.BuildAndRegister();
+            Ponies.Log("Call the Cavalry Mutator");
+            DesertionMutator.BuildAndRegister();
+            Ponies.Log("Desertion Mutator");
+            BureaucracyMutator.BuildAndRegister();
+            Ponies.Log("Bureaucracy Mutator");
+            GroupHugMutator.BuildAndRegister();
+            Ponies.Log("Group Hug Mutator");
+            DivineOmnipresence.BuildAndRegister();
+            Ponies.Log("Divine Omnipresence Mutator");
+            DivineVoid.BuildAndRegister();
+            Ponies.Log("Divine Void Mutator");
+            AdaptiveFoes.BuildAndRegister();
+            Ponies.Log("Adaptive Foes Mutator");
+            Bubbles.BuildAndRegister();
+            Ponies.Log("Bubbles Mutator");
+            WorthIt.BuildAndRegister();
+            Ponies.Log("Worth It Mutator");
+            YouveGotMail.BuildAndRegister();
+            Ponies.Log("You've Got Mail Mutator");
+            GenderReveal.BuildAndRegister();
+            Ponies.Log("Gender Reveal Mutator");
+            ReadyForAnything.BuildAndRegister();
+            Ponies.Log("Ready for Anything Mutator");
+            Scrapbook.BuildAndRegister();
+            Ponies.Log("Scrapbook Mutator");
+            Dendrophilia.BuildAndRegister();
+            Ponies.Log("Dendrophilia Mutator");
+            UnstableMatter.BuildAndRegister();
+            Ponies.Log("Unstable Matter Mutator");
+            NoRespite.BuildAndRegister();
+            Ponies.Log("No Respite Mutator");
+            WantItNeedIt.BuildAndRegister();
+            Ponies.Log("Want It Need It Mutator");
+            Equalizer.BuildAndRegister();
+            Ponies.Log("Equalizer Mutator");
+
+            //Expert challenges
+            PONIESTAKEOVER_spChallenge.BuildAndRegister();
+            Ponies.Log("Expert Challenge: PONIES TAKE OVER");
+            DesignedByCommittee_spChallenge.BuildAndRegister();
+            Ponies.Log("Expert Challenge: Red Tape");
+            SomeDivinity_spChallenge.BuildAndRegister();
+            Ponies.Log("Expert Challenge: Some Divinity");
+            IJustDontKnowWhatWentWrong_spChallenge.BuildAndRegister();
+            Ponies.Log("Expert Challenge: I Just Don't Know What Went Wrong");
+            GenderRevealParty_spChallenge.BuildAndRegister();
+            Ponies.Log("Expert Challenge: Gender Reveal Party");
+            Hoarding_spChallenge.BuildAndRegister();
+            Ponies.Log("Expert Challenge: Hoarding");
+            OneTrickPony_spChallenge.BuildAndRegister();
+            Ponies.Log("Expert Challenge: One Trick Pony");
+
+            //This challenge crossed the line between 'difficult' and 'unfair'.
+            //It wasn't really fun re-rolling for specific cards/units to simply have a chance.
+            //AllOutAssault_spChallenge.BuildAndRegister();
+            //Ponies.Log("All Out Assault");
+
+            //Load metagame items
+            //This inculdes the state of the 'Give Pony' toggle, the number of times Missing Mare was recruited (for the card mastery frame), and the victory status (normal/divine) of completed expert challenges.
+            PonyMetagame.LoadPonyMetaFile();
+            Ponies.Log("Loaded Metagame File");
 
             //Zap this to reset it.
             AccessTools.Field(typeof(UnitSynthesisMapping), "_dictionaryMapping").SetValue(ProviderManager.SaveManager.GetBalanceData().SynthesisMapping,null);
 
-            //RUn unit synthesis mapping.
-            Trainworks.Patches.AccessUnitSynthesisMapping.FindUnitSynthesisMappingInstanceToStub();
-            Ponies.Log("Trainworks Unit Synthesis Patch");
+            //Run unit synthesis mapping.
+            //Trainworks.Patches.AccessUnitSynthesisMapping.FindUnitSynthesisMappingInstanceToStub();
+            //Ponies.Log("Trainworks Unit Synthesis Patch");
+
+            //The card mastery frame is unlocked by finding Missing Mare.
+            //This just extends the enum type of MasteryFrameType.
+            PonyFrame = new PonyFrame("ponyCardFrame");
+            Ponies.Log("Pony Card Mastery Frame");
+
+            //Register "CardTraitHerb" as a tooltip provider.
+            CustomCardTraitHerb.RegisterTooltip();
+            Ponies.Log("Registered card trait Herb in the list of traits supported by tooltips.");
+
+            //Add idle chatter messages to base units.
+            MakeThemChatter.DoIt();
+            Ponies.Log("Added additional idle chatter messages to champion units.");
+
+            //Attempt to register status icons for tooltip titles.
+            //The icons appear to be part of the TextMeshProUGUI toolkit.
+            //They are referenced by an atlas array full of confusing hash tables.
+            //They might be easy to edit if you had the developer's tools...
+            //But trying to edit this to add new values manually is a nightmare.
+            //MakeIconsWorkHopefully.LocalizeIcons(true);
+            //Ponies.Log("Loacalizing Status Effect icons.");
+
+            //Clear the background 'Loading...' image and reset the game cursor back to normal.
+            PonyLoader.HideImage();
+            Ponies.Log("Ending Loading Image");
 
             //Event Data Mining
+            //ProviderManager.TryGetProvider<StatusEffectManager>(out StatusEffectManager statusEffectManager);
+            //string statusId = VanillaStatusEffectIDs.Armor;
+            //string title = TooltipUI.FormatTitleWithIcon(StatusEffectManager.GetLocalizedName(statusId, 1, false, true, false), statusEffectManager.GetTMPSpriteTag(statusId));
+            //Ponies.Log("Armor formatted title with icon:");
+            //Ponies.Log(title);
+            //Output: <color=#D9A122><sprite name="StatusArmor" tint=1></color> Armor
+            //statusId = VanillaStatusEffectIDs.Fragile;
+            //title = TooltipUI.FormatTitleWithIcon(StatusEffectManager.GetLocalizedName(statusId, 1, false, true, false), statusEffectManager.GetTMPSpriteTag(statusId));
+            //Ponies.Log("Fragile formatted title with icon:");
+            //Ponies.Log(title);
+            //Output: <color=#D9A122><sprite name="StatusFragile" tint=1></color> Fragile
+            //statusId = VanillaStatusEffectIDs.Regen;
+            //title = TooltipUI.FormatTitleWithIcon(StatusEffectManager.GetLocalizedName(statusId, 1, false, true, false), statusEffectManager.GetTMPSpriteTag(statusId));
+            //Ponies.Log("Regen formatted title with icon:");
+            //Ponies.Log(title);
+            //Output: <color=#88C701><sprite name="StatusRegen" tint=1></color> Regen
+            //statusId = VanillaStatusEffectIDs.Dazed;
+            //title = TooltipUI.FormatTitleWithIcon(StatusEffectManager.GetLocalizedName(statusId, 1, false, true, false), statusEffectManager.GetTMPSpriteTag(statusId));
+            //Ponies.Log("Dazed formatted title with icon:");
+            //Ponies.Log(title);
+            //Output: <color=#FD2D1D><sprite name="StatusDazed" tint=1></color> Dazed
+            //statusId = StatusEffectSocial.statusEffectData.GetStatusId();
+            //title = TooltipUI.FormatTitleWithIcon(StatusEffectManager.GetLocalizedName(statusId, 1, false, true, false), statusEffectManager.GetTMPSpriteTag(statusId));
+            //Ponies.Log("Social formatted title with icon:");
+            //Ponies.Log(title);
+            //Output: <color=#D9A122><sprite name="social" tint=1></color> <b>Social</b>
             //Ponies.Log("EventChoice_HephRecruit_TakeHammer".Localize());
             //Output: Fine-tuning is my middle name.
             //Ponies.Log("EventChoice_HephRecruit_TakeHammer_Optional".Localize());
@@ -309,8 +495,15 @@ namespace Equestrian.Init
             //Ponies.Log("CardData_overrideDescriptionKey-e6d3068eb68b320e-7987deaa29ff16e4891e8f14aac2d45e-v2".Localize());
             //Ponies.Log("CardRewardData__rewardTitleKey-2867c0be63de9841-11b47ead542e454429c34e3423ff3bf4-v2".Localize()); //Spike of the stygian reward.
             //Output: Apply {[trait0.statusmultiplier]}<sprite name="Xcost"> <b>Sap</b> and {[trait1.statusmultiplier]}<sprite name="Xcost"> <b>Frostbite</b>.
+            //Ponies.Log("MutatorData_descriptionKey-5905a445b67ceaee-82dc6963c668dd14d9bd45a460fd7173-v2".Localize()); //Shardless mutator description.
+            //Output: Disable all map nodes and events that provide <sprite name="PactShards">.
 
             EquestrianClanIsInit = true;
+
+            //RemovePonyPile.CollectArcadianUnits();
+
+            //Ponies.Log("Enum: " + PonyFrame.GetEnum().ToString());
+            //Ponies.Log("ID: " + (int)PonyFrame.GetEnum());
         }
         private void Awake()
         {
@@ -322,6 +515,11 @@ namespace Equestrian.Init
         public static void Log(string message)
         {
             Ponies.Instance.Logger.LogInfo("Equestrian Clan: "+message);
+        }
+
+        public static void LogError(string message) 
+        {
+            Ponies.Instance.Logger.LogError("Equestrian Clan: " + message);
         }
     }
 }

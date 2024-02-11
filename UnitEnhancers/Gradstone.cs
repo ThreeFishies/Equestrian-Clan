@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using Equestrian.Init;
-using Trainworks.Builders;
+using Trainworks.BuildersV2;
 using Trainworks.Constants;
 using Trainworks.Enums;
 using Equestrian;
@@ -21,10 +21,10 @@ namespace Equestrian.Enhancers
         {
             GradstoneData = new EnhancerDataBuilder
             {
-                ID = EnhancerID,
-                AssetPath = "ClanAssets/Gradstone.png",
+                EnhancerID = EnhancerID,
+                IconPath = "ClanAssets/Gradstone.png",
                 ClanID = EquestrianClan.ID,
-                LinkedClass = Ponies.EquestrianClanData,
+                //LinkedClass = Ponies.EquestrianClanData,
                 NameKey = "Pony_Enhancer_Gradstone_Name_Key",
                 DescriptionKey = "Pony_Enhancer_Gradstone_Description_Key",
                 EnhancerPoolIDs = {  },
@@ -33,9 +33,10 @@ namespace Equestrian.Enhancers
 
                 Upgrade = new CardUpgradeDataBuilder
                 {
+                    UpgradeID = "Pony_Enhancer_Gradstone_Name_Key",
                     UpgradeTitleKey = "Pony_Enhancer_Gradstone_Name_Key",
                     UpgradeDescriptionKey = "Pony_Enhancer_Gradstone_Description_Key",
-                    UpgradeIconPath = "ClanAssets/Gradstone.png",
+                    AssetPath = "ClanAssets/Gradstone.png",
                     BonusHP = 10,
                     BonusDamage = 10,
                     CostReduction = 99,
@@ -54,19 +55,20 @@ namespace Equestrian.Enhancers
                     {
                         new CharacterTriggerDataBuilder
                         {
+                            TriggerID = "GradstoneSocialTrigger",
                             Trigger = CharacterTriggerData.Trigger.OnUnscaledSpawn,
                             HideTriggerTooltip = true,
                             EffectBuilders = new List<CardEffectDataBuilder>
-                            { 
+                            {
                                 new CardEffectDataBuilder
                                 { 
-                                    EffectStateName = typeof(CustomEffectSocial).AssemblyQualifiedName,
+                                    EffectStateType = typeof(CustomEffectSocial),
                                     TargetMode = TargetMode.Self,
                                 }
                             }
                         }
                     }
-                }
+                }.Build()
             }.BuildAndRegister();
         }
     }

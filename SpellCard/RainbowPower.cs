@@ -57,6 +57,11 @@ namespace Equestrian.SpellCards
                     {
                         //TraitStateType = VanillaCardTraitTypes.CardTraitSelfPurge,
                         TraitStateName = "CardTraitSelfPurge"
+                    },
+                    new CardTraitDataBuilder
+                    {
+                        //TraitStateType = VanillaCardTraitTypes.CardTraitPermafrost,
+                        TraitStateName = "CardTraitPermafrost"
                     }
                 },
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using Equestrian.Init;
-using Trainworks.Builders;
+using Trainworks.BuildersV2;
 using Trainworks.Constants;
 using Trainworks.Enums;
 using Equestrian;
@@ -21,10 +21,10 @@ namespace Equestrian.Enhancers
         {
             PlaystoneData = new EnhancerDataBuilder
             {
-                ID = EnhancerID,
-                AssetPath = "ClanAssets/Playstone.png",
+                EnhancerID = EnhancerID,
+                IconPath = "ClanAssets/Playstone.png",
                 ClanID = EquestrianClan.ID,
-                LinkedClass = Ponies.EquestrianClanData,
+                //LinkedClass = Ponies.EquestrianClanData,
                 NameKey = "Pony_Enhancer_Playstone_Name_Key",
                 DescriptionKey = "Pony_Enhancer_Playstone_Description_Key",
                 EnhancerPoolIDs = {  },
@@ -33,15 +33,16 @@ namespace Equestrian.Enhancers
 
                 Upgrade = new CardUpgradeDataBuilder
                 {
+                    UpgradeID = "Pony_Enhancer_Playstone_Name_Key",
                     UpgradeTitleKey = "Pony_Enhancer_Playstone_Name_Key",
                     UpgradeDescriptionKey = "Pony_Enhancer_Playstone_Description_Key",
-                    UpgradeIconPath = "ClanAssets/Playstone.png",
+                    AssetPath = "ClanAssets/Playstone.png",
                     BonusHP = 0,
                     BonusDamage = 0,
                     HideUpgradeIconOnCard = false,
                     CostReduction = 2,
                     XCostReduction = 2
-                }
+                }.Build()
             }.BuildAndRegister();
         }
     }

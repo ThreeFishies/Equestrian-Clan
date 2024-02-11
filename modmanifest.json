@@ -7,8 +7,11 @@
         "Cards",
         "Monsters",
         "Relics",
-        "Lore"
+        "Mutators",
+        "Challenges",
+        "Lore",
+        "Chatter"
     ],
-    "ChangeLog": "Version 0.9.7.0:\n * Fixed a softlock that could occur when attempting to exceed maximum room capacity with the Equestrian Rail Spike.\n * Fixed a bug that caused the Arcadian unit 'Fireshaped' to incorrectly say that it summoned Background Ponies.\n * Improved compatibility with the Arcadian Clan. There are now Equestrian-specific versions of Analog! Be sure to check them out.\n * Added some stability checking to prevent the game from crashing if unit synthesis mapping breaks.\n * The spell 'The Elements of Harmony' no longer mistakenly adds stats.\n * Removed multistrike from Misty Step and buffed rage on strike to 2. Essence adjusted to +8 Attack, +3 health, and 'Strike: Apply Rage 2'.\n * Units added from Mare A Lee's Teacher III upgrade now start with +10 health, down from +20.\n * Ember gained from 'A Child's Drawing' increased to four.\n * Regen applied from the 'First Aid' spell increased to three.\n * Poison Joke's attack boost now properly persists through death.\n * Alicornification changed to double a unit's stats instead of applying fixed values. It now also heals to full.\n * Redesigned the 'Seventh Element' relic. It now causes triggered abilities on social units to activate an additional time.\n * You can now encounter the flower ponies on your journey through Hell! Try not to scare them too badly.\n * A secret unit has been added. Can you find the elusive and mysterious Missing Mare?",
+    "ChangeLog": "Version 1.2.3:\n\n * Performed some back-end code cleanup, retiring some functions that are now handled by Trainworks and are no longer necessary. This includes unit essence fallbacks and the pony depiler.\n\n * Changed localization initialization so the function is now only called once.\n\n * Added status effect icons to tooltips.\n\n * Fixed a bug that removed the pact shard cost of duplicating a unit with an Equestrian essence.\n\n * Equestrian champions are no longer incorrectly flagged as banner units.",
     "CosmeticOnly": false
 }
