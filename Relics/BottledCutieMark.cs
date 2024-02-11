@@ -15,10 +15,11 @@ namespace Equestrian.Relic
     class ImaginaryFriends
     {
         public static readonly string ID = Ponies.GUID + "_ImaginaryFriends";
+        public static RelicData relicData;
 
         public static void BuildAndRegister()
         {
-            new CollectableRelicDataBuilder
+            relicData = new CollectableRelicDataBuilder
             {
                 CollectableRelicID = ID,
                 //Name = "ImaginaryFriends",
@@ -68,6 +69,8 @@ namespace Equestrian.Relic
                 },
                 UnlockLevel = 7,
             }.BuildAndRegister();
+
+            AccessTools.Field(typeof(RelicData), "relicLoreTooltipStyle").SetValue(relicData, Ponies.PonyRelicTooltip.GetEnum());
         }
     }
 }

@@ -17,10 +17,11 @@ namespace Equestrian.Relic
     class TheSeventhElement
     {
         public static readonly string ID = Ponies.GUID + "_TheSeventhElementRelic";
+        public static RelicData relicData;
 
         public static void BuildAndRegister()
         {
-            new CollectableRelicDataBuilder
+            relicData = new CollectableRelicDataBuilder
             {
                 CollectableRelicID = ID,
                 NameKey = "Pony_Relic_TheSeventhElement_Name_Key",
@@ -87,6 +88,8 @@ namespace Equestrian.Relic
                 RelicActivatedKey = "",
                 //UnlockLevel = 6,
             }.BuildAndRegister();
+
+            AccessTools.Field(typeof(RelicData), "relicLoreTooltipStyle").SetValue(relicData, Ponies.PonyRelicTooltip.GetEnum());
         }
     }
 }

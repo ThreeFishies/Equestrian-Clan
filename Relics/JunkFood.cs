@@ -15,10 +15,11 @@ namespace Equestrian.Relic
     class JunkFood
     {
         public static readonly string ID = Ponies.GUID + "_JunkFoodRelic";
+        public static RelicData relicData;
 
         public static void BuildAndRegister()
         {
-            new CollectableRelicDataBuilder
+            relicData = new CollectableRelicDataBuilder
             {
                 CollectableRelicID = ID,
                 NameKey = "Pony_Relic_JunkFood_Name_Key",
@@ -49,6 +50,8 @@ namespace Equestrian.Relic
                 RelicActivatedKey = "Pony_Relic_JunkFood_Activated_Key",
                 UnlockLevel = 2,
             }.BuildAndRegister();
+
+            AccessTools.Field(typeof(RelicData), "relicLoreTooltipStyle").SetValue(relicData, Ponies.PonyRelicTooltip.GetEnum());
         }
     }
 }

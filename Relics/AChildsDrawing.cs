@@ -16,10 +16,11 @@ namespace Equestrian.Relic
     class AChildsDrawing
     {
         public static readonly string ID = Ponies.GUID + "_AChildsDrawingRelic";
+        public static RelicData relicData;
 
         public static void BuildAndRegister()
         {
-            new CollectableRelicDataBuilder
+            relicData = new CollectableRelicDataBuilder
             {
                 CollectableRelicID = ID,
                 NameKey = "Pony_Relic_AChildsDrawing_Name_Key",
@@ -79,6 +80,8 @@ namespace Equestrian.Relic
                 RelicActivatedKey = "Pony_Relic_AChildsDrawing_Activated_Key",
                 UnlockLevel = 3,
             }.BuildAndRegister();
+
+            AccessTools.Field(typeof(RelicData), "relicLoreTooltipStyle").SetValue(relicData, Ponies.PonyRelicTooltip.GetEnum());
         }
     }
 }
